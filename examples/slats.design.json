@@ -1,0 +1,222 @@
+{
+ "model": "slats",
+ "about": "Six slats with 45-degree ends, 160-210 mm long, three to a plate lying diagonally; they assemble side by side, longest first.",
+ "pieces": [
+  {
+   "name": "slat1",
+   "plate": 1,
+   "outline": [
+    [
+     -114.0,
+     -9.0
+    ],
+    [
+     96.0,
+     -9.0
+    ],
+    [
+     114.0,
+     9.0
+    ],
+    [
+     -96.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     150.62742,
+     105.37258
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     0.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "slat2",
+   "plate": 1,
+   "outline": [
+    [
+     -104.0,
+     -9.0
+    ],
+    [
+     86.0,
+     -9.0
+    ],
+    [
+     104.0,
+     9.0
+    ],
+    [
+     -86.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     128.0
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     36.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "slat3",
+   "plate": 1,
+   "outline": [
+    [
+     -94.0,
+     -9.0
+    ],
+    [
+     76.0,
+     -9.0
+    ],
+    [
+     94.0,
+     9.0
+    ],
+    [
+     -76.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     105.37258,
+     150.62742
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     72.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "slat4",
+   "plate": 2,
+   "outline": [
+    [
+     -109.0,
+     -9.0
+    ],
+    [
+     91.0,
+     -9.0
+    ],
+    [
+     109.0,
+     9.0
+    ],
+    [
+     -91.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     150.62742,
+     105.37258
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     18.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "slat5",
+   "plate": 2,
+   "outline": [
+    [
+     -99.0,
+     -9.0
+    ],
+    [
+     81.0,
+     -9.0
+    ],
+    [
+     99.0,
+     9.0
+    ],
+    [
+     -81.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     128.0
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     54.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "slat6",
+   "plate": 2,
+   "outline": [
+    [
+     -89.0,
+     -9.0
+    ],
+    [
+     71.0,
+     -9.0
+    ],
+    [
+     89.0,
+     9.0
+    ],
+    [
+     -71.0,
+     9.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     105.37258,
+     150.62742
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     0.0,
+     90.0
+    ],
+    "rotation": 0
+   }
+  }
+ ]
+}

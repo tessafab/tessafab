@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- French pattern pattern for TessaFab (made by pattern_library.py)
+     Squares and rectangles of four sizes on a 5 mm unit, each block offset, 0.4 mm grout.
+     The page is one repeat (30 x 90 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="30.0000mm" height="90.0000mm" viewBox="0 0 30.0000 90.0000"
+     data-pattern="{&quot;id&quot;: &quot;french_pattern&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;unit&quot;: 5.0}}">
+<title>French pattern</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="0.0000,90.0000 15.0000,90.0000 15.0000,75.0000 0.0000,75.0000"/>
+  <polygon fill="#efe3c8" points="10.0000,60.0000 25.0000,60.0000 25.0000,45.0000 10.0000,45.0000"/>
+  <polygon fill="#efe3c8" points="20.0000,30.0000 35.0000,30.0000 35.0000,15.0000 20.0000,15.0000"/>
+  <polygon fill="#efe3c8" points="-5.0000,60.0000 5.0000,60.0000 5.0000,50.0000 -5.0000,50.0000"/>
+  <polygon fill="#efe3c8" points="5.0000,30.0000 15.0000,30.0000 15.0000,20.0000 5.0000,20.0000"/>
+  <polygon fill="#efe3c8" points="15.0000,90.0000 25.0000,90.0000 25.0000,80.0000 15.0000,80.0000"/>
+  <polygon fill="#c4744f" points="5.0000,60.0000 10.0000,60.0000 10.0000,50.0000 5.0000,50.0000"/>
+  <polygon fill="#c4744f" points="15.0000,30.0000 20.0000,30.0000 20.0000,20.0000 15.0000,20.0000"/>
+  <polygon fill="#c4744f" points="25.0000,90.0000 30.0000,90.0000 30.0000,80.0000 25.0000,80.0000"/>
+  <polygon fill="#d9c49a" points="-5.0000,50.0000 10.0000,50.0000 10.0000,45.0000 -5.0000,45.0000"/>
+  <polygon fill="#d9c49a" points="5.0000,20.0000 20.0000,20.0000 20.0000,15.0000 5.0000,15.0000"/>
+  <polygon fill="#d9c49a" points="15.0000,80.0000 30.0000,80.0000 30.0000,75.0000 15.0000,75.0000"/>
+  <polygon fill="#c4744f" points="0.0000,75.0000 10.0000,75.0000 10.0000,60.0000 0.0000,60.0000"/>
+  <polygon fill="#c4744f" points="10.0000,45.0000 20.0000,45.0000 20.0000,30.0000 10.0000,30.0000"/>
+  <polygon fill="#c4744f" points="20.0000,15.0000 30.0000,15.0000 30.0000,0.0000 20.0000,0.0000"/>
+  <polygon fill="#efe3c8" points="0.0000,15.0000 10.0000,15.0000 10.0000,5.0000 0.0000,5.0000"/>
+  <polygon fill="#efe3c8" points="10.0000,75.0000 20.0000,75.0000 20.0000,65.0000 10.0000,65.0000"/>
+  <polygon fill="#efe3c8" points="20.0000,45.0000 30.0000,45.0000 30.0000,35.0000 20.0000,35.0000"/>
+  <polygon fill="#d9c49a" points="0.0000,5.0000 10.0000,5.0000 10.0000,0.0000 0.0000,0.0000"/>
+  <polygon fill="#d9c49a" points="10.0000,65.0000 20.0000,65.0000 20.0000,60.0000 10.0000,60.0000"/>
+  <polygon fill="#d9c49a" points="20.0000,35.0000 30.0000,35.0000 30.0000,30.0000 20.0000,30.0000"/>
+  <polygon fill="#c4744f" points="0.0000,45.0000 10.0000,45.0000 10.0000,30.0000 0.0000,30.0000"/>
+  <polygon fill="#c4744f" points="10.0000,15.0000 20.0000,15.0000 20.0000,0.0000 10.0000,0.0000"/>
+  <polygon fill="#c4744f" points="20.0000,75.0000 30.0000,75.0000 30.0000,60.0000 20.0000,60.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="12.7482" y1="57.2518" x2="22.2518" y2="47.7482"/>   <!-- #efe3c8 tiles: lines at 45 deg -->
+  <line x1="-2.0500" y1="47.5000" x2="7.0500" y2="47.5000"/>   <!-- #d9c49a tiles: lines at 0 deg -->
+  <line x1="15.0000" y1="42.0500" x2="15.0000" y2="32.9500"/>   <!-- #c4744f tiles: lines at 90 deg -->
+</g>
+</svg>

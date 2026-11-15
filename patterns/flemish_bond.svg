@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Flemish bond pattern for TessaFab (made by pattern_library.py)
+     Long and short bricks (14 and 7 mm) alternating in every row, 0.5 mm grout.
+     The page is one repeat (21 x 14 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="21.0000mm" height="14.0000mm" viewBox="0 0 21.0000 14.0000"
+     data-pattern="{&quot;id&quot;: &quot;flemish_bond&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.5, &quot;header&quot;: 7.0}}">
+<title>Flemish bond</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.5" stroke-linejoin="miter">
+  <polygon fill="#b5562f" points="0.0000,14.0000 14.0000,14.0000 14.0000,7.0000 0.0000,7.0000"/>
+  <polygon fill="#b5562f" points="10.5000,7.0000 24.5000,7.0000 24.5000,0.0000 10.5000,0.0000"/>
+  <polygon fill="#c4744f" points="3.5000,7.0000 10.5000,7.0000 10.5000,0.0000 3.5000,0.0000"/>
+  <polygon fill="#c4744f" points="14.0000,14.0000 21.0000,14.0000 21.0000,7.0000 14.0000,7.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="2.8000" y1="10.5000" x2="11.2000" y2="10.5000"/>   <!-- #b5562f tiles: lines at 0 deg -->
+  <line x1="7.0000" y1="5.2500" x2="7.0000" y2="1.7500"/>   <!-- #c4744f tiles: lines at 90 deg -->
+</g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Chevron pattern for TessaFab (made by pattern_library.py)
+     Columns 14 mm wide, planks 7 mm tall with 45 deg ends, 0.4 mm grout.
+     The page is one repeat (28 x 7 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="28.0000mm" height="7.0000mm" viewBox="0 0 28.0000 7.0000"
+     data-pattern="{&quot;id&quot;: &quot;chevron&quot;, &quot;values&quot;: {&quot;column_width&quot;: 14.0, &quot;grout&quot;: 0.4, &quot;plank_height&quot;: 7.0}}">
+<title>Chevron</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="0.0000,14.0000 14.0000,0.0000 14.0000,-7.0000 0.0000,7.0000"/>
+  <polygon fill="#9c6a3c" points="14.0000,0.0000 28.0000,14.0000 28.0000,7.0000 14.0000,-7.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="2.6195" y1="7.8805" x2="11.3805" y2="-0.8805"/>   <!-- #d8b07a tiles: lines at 45 deg -->
+  <line x1="16.6195" y1="-0.8805" x2="25.3805" y2="7.8805"/>   <!-- #9c6a3c tiles: lines at -45 deg -->
+</g>
+</svg>

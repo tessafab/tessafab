@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Checkerboard, Rings pattern for TessaFab (made by pattern_library.py)
+     10 mm squares, lines across and along in alternate squares, 0.4 mm grout.
+     The page is one repeat (20 x 20 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="20.0000mm" height="20.0000mm" viewBox="0 0 20.0000 20.0000"
+     data-pattern="{&quot;id&quot;: &quot;checkerboard&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;square&quot;: 10.0}}">
+<title>Checkerboard, Rings</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="0.0000,20.0000 10.0000,20.0000 10.0000,10.0000 0.0000,10.0000"/>
+  <polygon fill="#efe3c8" points="10.0000,10.0000 20.0000,10.0000 20.0000,0.0000 10.0000,0.0000"/>
+  <polygon fill="#5f6b75" points="0.0000,10.0000 10.0000,10.0000 10.0000,0.0000 0.0000,0.0000"/>
+  <polygon fill="#5f6b75" points="10.0000,20.0000 20.0000,20.0000 20.0000,10.0000 10.0000,10.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="2.2000" y1="15.0000" x2="7.8000" y2="15.0000"/>   <!-- #efe3c8 tiles: lines at 0 deg -->
+  <line x1="5.0000" y1="7.8000" x2="5.0000" y2="2.2000"/>   <!-- #5f6b75 tiles: lines at 90 deg -->
+</g>
+</svg>

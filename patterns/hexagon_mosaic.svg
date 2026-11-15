@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hexagon mosaic pattern for TessaFab (made by pattern_library.py)
+     Hexagons with 3 mm sides in three colours, scattered, 0.3 mm grout.
+     The page is one repeat (27 x 20.78 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="27.0000mm" height="20.7846mm" viewBox="0 0 27.0000 20.7846"
+     data-pattern="{&quot;id&quot;: &quot;hexagon_mosaic&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.3, &quot;side&quot;: 3.0}}">
+<title>Hexagon mosaic</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.3" stroke-linejoin="miter">
+  <polygon fill="#2f4a6b" points="3.0000,20.7846 1.5000,18.1865 -1.5000,18.1865 -3.0000,20.7846 -1.5000,23.3827 1.5000,23.3827"/>
+  <polygon fill="#2f4a6b" points="7.5000,18.1865 6.0000,15.5885 3.0000,15.5885 1.5000,18.1865 3.0000,20.7846 6.0000,20.7846"/>
+  <polygon fill="#8ec3c9" points="3.0000,15.5885 1.5000,12.9904 -1.5000,12.9904 -3.0000,15.5885 -1.5000,18.1865 1.5000,18.1865"/>
+  <polygon fill="#8ec3c9" points="7.5000,12.9904 6.0000,10.3923 3.0000,10.3923 1.5000,12.9904 3.0000,15.5885 6.0000,15.5885"/>
+  <polygon fill="#8ec3c9" points="3.0000,10.3923 1.5000,7.7942 -1.5000,7.7942 -3.0000,10.3923 -1.5000,12.9904 1.5000,12.9904"/>
+  <polygon fill="#2f4a6b" points="7.5000,7.7942 6.0000,5.1962 3.0000,5.1962 1.5000,7.7942 3.0000,10.3923 6.0000,10.3923"/>
+  <polygon fill="#2f4a6b" points="3.0000,5.1962 1.5000,2.5981 -1.5000,2.5981 -3.0000,5.1962 -1.5000,7.7942 1.5000,7.7942"/>
+  <polygon fill="#8ec3c9" points="7.5000,2.5981 6.0000,0.0000 3.0000,0.0000 1.5000,2.5981 3.0000,5.1962 6.0000,5.1962"/>
+  <polygon fill="#8ec3c9" points="12.0000,20.7846 10.5000,18.1865 7.5000,18.1865 6.0000,20.7846 7.5000,23.3827 10.5000,23.3827"/>
+  <polygon fill="#8ec3c9" points="16.5000,18.1865 15.0000,15.5885 12.0000,15.5885 10.5000,18.1865 12.0000,20.7846 15.0000,20.7846"/>
+  <polygon fill="#efe3c8" points="12.0000,15.5885 10.5000,12.9904 7.5000,12.9904 6.0000,15.5885 7.5000,18.1865 10.5000,18.1865"/>
+  <polygon fill="#efe3c8" points="16.5000,12.9904 15.0000,10.3923 12.0000,10.3923 10.5000,12.9904 12.0000,15.5885 15.0000,15.5885"/>
+  <polygon fill="#8ec3c9" points="12.0000,10.3923 10.5000,7.7942 7.5000,7.7942 6.0000,10.3923 7.5000,12.9904 10.5000,12.9904"/>
+  <polygon fill="#efe3c8" points="16.5000,7.7942 15.0000,5.1962 12.0000,5.1962 10.5000,7.7942 12.0000,10.3923 15.0000,10.3923"/>
+  <polygon fill="#efe3c8" points="12.0000,5.1962 10.5000,2.5981 7.5000,2.5981 6.0000,5.1962 7.5000,7.7942 10.5000,7.7942"/>
+  <polygon fill="#2f4a6b" points="16.5000,2.5981 15.0000,0.0000 12.0000,0.0000 10.5000,2.5981 12.0000,5.1962 15.0000,5.1962"/>
+  <polygon fill="#2f4a6b" points="21.0000,20.7846 19.5000,18.1865 16.5000,18.1865 15.0000,20.7846 16.5000,23.3827 19.5000,23.3827"/>
+  <polygon fill="#efe3c8" points="25.5000,18.1865 24.0000,15.5885 21.0000,15.5885 19.5000,18.1865 21.0000,20.7846 24.0000,20.7846"/>
+  <polygon fill="#8ec3c9" points="21.0000,15.5885 19.5000,12.9904 16.5000,12.9904 15.0000,15.5885 16.5000,18.1865 19.5000,18.1865"/>
+  <polygon fill="#2f4a6b" points="25.5000,12.9904 24.0000,10.3923 21.0000,10.3923 19.5000,12.9904 21.0000,15.5885 24.0000,15.5885"/>
+  <polygon fill="#efe3c8" points="21.0000,10.3923 19.5000,7.7942 16.5000,7.7942 15.0000,10.3923 16.5000,12.9904 19.5000,12.9904"/>
+  <polygon fill="#efe3c8" points="25.5000,7.7942 24.0000,5.1962 21.0000,5.1962 19.5000,7.7942 21.0000,10.3923 24.0000,10.3923"/>
+  <polygon fill="#efe3c8" points="21.0000,5.1962 19.5000,2.5981 16.5000,2.5981 15.0000,5.1962 16.5000,7.7942 19.5000,7.7942"/>
+  <polygon fill="#2f4a6b" points="25.5000,2.5981 24.0000,0.0000 21.0000,0.0000 19.5000,2.5981 21.0000,5.1962 24.0000,5.1962"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="9.0000" cy="10.3923" r="1.20"/>   <!-- #8ec3c9 tiles: concentric rings -->
+  <circle cx="13.5000" cy="2.5981" r="1.20"/>   <!-- #2f4a6b tiles: concentric rings -->
+  <circle cx="13.5000" cy="7.7942" r="1.20"/>   <!-- #efe3c8 tiles: concentric rings -->
+</g>
+</svg>

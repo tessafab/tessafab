@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Herringbone, Square pattern for TessaFab (made by pattern_library.py)
+     Planks 4 x 12 mm along x and y, 0.4 mm grout, zig-zag running at 45 deg.
+     The page is one repeat (24 x 24 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="24.0000mm" height="24.0000mm" viewBox="0 0 24.0000 24.0000"
+     data-pattern="{&quot;id&quot;: &quot;herringbone&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;layout&quot;: &quot;square&quot;, &quot;plank_ratio&quot;: 3, &quot;plank_width&quot;: 4.0}}">
+<title>Herringbone, Square</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="0.0000,24.0000 12.0000,24.0000 12.0000,20.0000 0.0000,20.0000"/>
+  <polygon fill="#d8b07a" points="4.0000,20.0000 16.0000,20.0000 16.0000,16.0000 4.0000,16.0000"/>
+  <polygon fill="#d8b07a" points="-4.0000,4.0000 8.0000,4.0000 8.0000,0.0000 -4.0000,0.0000"/>
+  <polygon fill="#d8b07a" points="8.0000,16.0000 20.0000,16.0000 20.0000,12.0000 8.0000,12.0000"/>
+  <polygon fill="#d8b07a" points="12.0000,12.0000 24.0000,12.0000 24.0000,8.0000 12.0000,8.0000"/>
+  <polygon fill="#d8b07a" points="16.0000,8.0000 28.0000,8.0000 28.0000,4.0000 16.0000,4.0000"/>
+  <polygon fill="#9c6a3c" points="0.0000,20.0000 4.0000,20.0000 4.0000,8.0000 0.0000,8.0000"/>
+  <polygon fill="#9c6a3c" points="4.0000,16.0000 8.0000,16.0000 8.0000,4.0000 4.0000,4.0000"/>
+  <polygon fill="#9c6a3c" points="16.0000,28.0000 20.0000,28.0000 20.0000,16.0000 16.0000,16.0000"/>
+  <polygon fill="#9c6a3c" points="8.0000,12.0000 12.0000,12.0000 12.0000,0.0000 8.0000,0.0000"/>
+  <polygon fill="#9c6a3c" points="20.0000,24.0000 24.0000,24.0000 24.0000,12.0000 20.0000,12.0000"/>
+  <polygon fill="#9c6a3c" points="12.0000,8.0000 16.0000,8.0000 16.0000,-4.0000 12.0000,-4.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="10.5000" y1="14.0000" x2="17.5000" y2="14.0000"/>   <!-- #d8b07a tiles: lines at 0 deg -->
+  <line x1="6.0000" y1="13.5000" x2="6.0000" y2="6.5000"/>   <!-- #9c6a3c tiles: lines at 90 deg -->
+</g>
+</svg>

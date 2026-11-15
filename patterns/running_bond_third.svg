@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Running bond, Third offset pattern for TessaFab (made by pattern_library.py)
+     Bricks 24 x 8 mm, each row shifted half a brick, 0.6 mm grout.
+     The page is one repeat (24 x 24 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="24.0000mm" height="24.0000mm" viewBox="0 0 24.0000 24.0000"
+     data-pattern="{&quot;id&quot;: &quot;running_bond&quot;, &quot;values&quot;: {&quot;brick_height&quot;: 8.0, &quot;brick_length&quot;: 24.0, &quot;grout&quot;: 0.6, &quot;offset&quot;: &quot;third&quot;}}">
+<title>Running bond, Third offset</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.6" stroke-linejoin="miter">
+  <polygon fill="#b5562f" points="-8.0000,8.0000 16.0000,8.0000 16.0000,0.0000 -8.0000,0.0000"/>
+  <polygon fill="#b5562f" points="0.0000,24.0000 24.0000,24.0000 24.0000,16.0000 0.0000,16.0000"/>
+  <polygon fill="#b5562f" points="8.0000,16.0000 32.0000,16.0000 32.0000,8.0000 8.0000,8.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="4.3350" y1="20.0000" x2="19.6650" y2="20.0000"/>   <!-- #b5562f tiles: lines at 0 deg -->
+</g>
+</svg>

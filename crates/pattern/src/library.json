@@ -1,0 +1,3051 @@
+{
+ "patterns": [
+  {
+   "id": "herringbone",
+   "name": "Herringbone",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Light planks"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Dark planks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "select",
+      "key": "layout",
+      "label": "Layout",
+      "input": true,
+      "widget": "html5",
+      "dataSrc": "values",
+      "data": {
+       "values": [
+        {
+         "label": "Diagonal, zig-zag along x",
+         "value": "diagonal"
+        },
+        {
+         "label": "Square-on, planks along x and y",
+         "value": "square"
+        }
+       ]
+      },
+      "defaultValue": "diagonal",
+      "validate": {
+       "required": true
+      }
+     },
+     {
+      "type": "number",
+      "key": "plank_width",
+      "label": "Plank width",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "plank_ratio",
+      "label": "Plank length",
+      "input": true,
+      "defaultValue": 3,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 8,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "x width"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "fine",
+     "name": "Fine",
+     "values": {
+      "plank_width": 3.5,
+      "plank_ratio": 4
+     },
+     "directions": {}
+    },
+    {
+     "id": "square",
+     "name": "Square",
+     "values": {
+      "layout": "square",
+      "plank_width": 4.0
+     },
+     "directions": {}
+    },
+    {
+     "id": "brick",
+     "name": "Brick",
+     "values": {
+      "layout": "square",
+      "plank_width": 6.0,
+      "plank_ratio": 2
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "chevron",
+   "name": "Chevron",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Light planks"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Dark planks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "column_width",
+      "label": "Column width",
+      "input": true,
+      "defaultValue": 14.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "plank_height",
+      "label": "Plank height",
+      "input": true,
+      "defaultValue": 7.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "running_bond",
+   "name": "Running bond",
+   "groups": [
+    {
+     "group": "#b5562f",
+     "label": "Bricks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "brick_length",
+      "label": "Brick length",
+      "input": true,
+      "defaultValue": 20.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 120,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "brick_height",
+      "label": "Brick height",
+      "input": true,
+      "defaultValue": 10.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "select",
+      "key": "offset",
+      "label": "Each row shifted by",
+      "input": true,
+      "widget": "html5",
+      "dataSrc": "values",
+      "data": {
+       "values": [
+        {
+         "label": "Half a brick",
+         "value": "half"
+        },
+        {
+         "label": "A third of a brick",
+         "value": "third"
+        },
+        {
+         "label": "A quarter of a brick",
+         "value": "quarter"
+        }
+       ]
+      },
+      "defaultValue": "half",
+      "validate": {
+       "required": true
+      }
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.6,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "third",
+     "name": "Third offset",
+     "values": {
+      "offset": "third",
+      "brick_length": 24.0,
+      "brick_height": 8.0
+     },
+     "directions": {}
+    },
+    {
+     "id": "linear",
+     "name": "Linear",
+     "values": {
+      "brick_length": 36.0,
+      "brick_height": 4.0,
+      "offset": "third",
+      "grout": 0.4
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "basketweave",
+   "name": "Basketweave",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Light planks"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Dark planks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "plank_width",
+      "label": "Plank width",
+      "input": true,
+      "defaultValue": 5.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "planks",
+      "label": "Planks per block",
+      "input": true,
+      "defaultValue": 2,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 5,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      }
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "three",
+     "name": "Three planks",
+     "values": {
+      "planks": 3,
+      "plank_width": 4.0
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "parquet_diagonal",
+   "name": "Diagonal parquet",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Light planks"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Dark planks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "square",
+      "label": "Square size",
+      "input": true,
+      "defaultValue": 10.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "honeycomb",
+   "name": "Honeycomb",
+   "groups": [
+    {
+     "group": "#e0b040",
+     "label": "Hexagons"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 50,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.6,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "tumbling_blocks",
+   "name": "Tumbling blocks",
+   "groups": [
+    {
+     "group": "#f0dcb4",
+     "label": "Top faces"
+    },
+    {
+     "group": "#b4783c",
+     "label": "Left faces"
+    },
+    {
+     "group": "#784620",
+     "label": "Right faces"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 8.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 50,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.5,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "hopscotch",
+   "name": "Hopscotch",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Big squares"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Small squares"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "unit",
+      "label": "Small square",
+      "input": true,
+      "defaultValue": 4.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.5,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "stack_bond",
+   "name": "Stack bond",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Tiles"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "tile_length",
+      "label": "Tile length",
+      "input": true,
+      "defaultValue": 20.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 120,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "tile_height",
+      "label": "Tile height",
+      "input": true,
+      "defaultValue": 10.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 120,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "square",
+     "name": "Square",
+     "values": {
+      "tile_length": 12.0,
+      "tile_height": 12.0
+     },
+     "directions": {}
+    },
+    {
+     "id": "vertical",
+     "name": "Vertical",
+     "values": {
+      "tile_length": 8.0,
+      "tile_height": 24.0
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "flemish_bond",
+   "name": "Flemish bond",
+   "groups": [
+    {
+     "group": "#b5562f",
+     "label": "Long bricks"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Short bricks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "header",
+      "label": "Short brick",
+      "input": true,
+      "defaultValue": 7.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.5,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "english_bond",
+   "name": "English bond",
+   "groups": [
+    {
+     "group": "#b5562f",
+     "label": "Long bricks"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Short bricks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "header",
+      "label": "Short brick",
+      "input": true,
+      "defaultValue": 7.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.5,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "pinwheel",
+   "name": "Pinwheel",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Across"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Along"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Centres"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "rect_length",
+      "label": "Rectangle length",
+      "input": true,
+      "defaultValue": 12.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "rect_width",
+      "label": "Rectangle width",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "wide",
+     "name": "Wide centre",
+     "values": {
+      "rect_length": 15.0,
+      "rect_width": 5.0
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "harlequin",
+   "name": "Harlequin",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Light diamonds"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Dark diamonds"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "width",
+      "label": "Diamond width",
+      "input": true,
+      "defaultValue": 12.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "height",
+      "label": "Diamond height",
+      "input": true,
+      "defaultValue": 18.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "diamond",
+     "name": "Diamond",
+     "values": {
+      "width": 12.0,
+      "height": 12.0
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "checkerboard",
+   "name": "Checkerboard",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Light squares"
+    },
+    {
+     "group": "#5f6b75",
+     "label": "Dark squares"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "square",
+      "label": "Square size",
+      "input": true,
+      "defaultValue": 10.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "rings",
+     "name": "Rings",
+     "values": {},
+     "directions": {
+      "#efe3c8": "rings",
+      "#5f6b75": "rings"
+     }
+    }
+   ]
+  },
+  {
+   "id": "octagon_dot",
+   "name": "Octagon and dot",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Octagons"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Dots"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "octagon",
+      "label": "Octagon width",
+      "input": true,
+      "defaultValue": 12.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "penny_round",
+   "name": "Penny round",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Pennies"
+    },
+    {
+     "group": "#5f6b75",
+     "label": "Between"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "diameter",
+      "label": "Penny diameter",
+      "input": true,
+      "defaultValue": 8.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "select",
+      "key": "grid",
+      "label": "Laid",
+      "input": true,
+      "widget": "html5",
+      "dataSrc": "values",
+      "data": {
+       "values": [
+        {
+         "label": "Close-packed rows",
+         "value": "hex"
+        },
+        {
+         "label": "Square grid",
+         "value": "square"
+        }
+       ]
+      },
+      "defaultValue": "hex",
+      "validate": {
+       "required": true
+      }
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": [
+    {
+     "id": "square",
+     "name": "Square grid",
+     "values": {
+      "grid": "square"
+     },
+     "directions": {}
+    }
+   ]
+  },
+  {
+   "id": "fish_scale",
+   "name": "Fish scale",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Light rows"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Dark rows"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "scale_width",
+      "label": "Scale width",
+      "input": true,
+      "defaultValue": 12.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "long_hexagon",
+   "name": "Elongated hexagon",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Light hexagons"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Dark hexagons"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "flat_length",
+      "label": "Flat side length",
+      "input": true,
+      "defaultValue": 14.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "height",
+      "label": "Height",
+      "input": true,
+      "defaultValue": 8.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "hexagon_flower",
+   "name": "Hexagon flower",
+   "groups": [
+    {
+     "group": "#e0b040",
+     "label": "Centres"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Petals"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 4.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "hexagons_triangles",
+   "name": "Hexagons and triangles",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Hexagons"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Triangles"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "triangles",
+   "name": "Triangles",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Up"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Down"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 10.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "squares_triangles",
+   "name": "Squares and triangles",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Squares"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Up triangles"
+    },
+    {
+     "group": "#5f6b75",
+     "label": "Down triangles"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 8.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "french_pattern",
+   "name": "French pattern",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Squares"
+    },
+    {
+     "group": "#d9c49a",
+     "label": "Wide"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Tall"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "unit",
+      "label": "Unit",
+      "input": true,
+      "defaultValue": 5.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "double_herringbone",
+   "name": "Double herringbone",
+   "groups": [
+    {
+     "group": "#d8b07a",
+     "label": "Light planks"
+    },
+    {
+     "group": "#9c6a3c",
+     "label": "Dark planks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "plank_width",
+      "label": "Plank width",
+      "input": true,
+      "defaultValue": 3.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "plank_ratio",
+      "label": "Plank length",
+      "input": true,
+      "defaultValue": 3,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 8,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "x pair width"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "crosses",
+   "name": "Crosses",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Light crosses"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Dark crosses"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "arm",
+      "label": "Arm width",
+      "input": true,
+      "defaultValue": 5.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "staircase",
+   "name": "Staircase",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Light steps"
+    },
+    {
+     "group": "#5f6b75",
+     "label": "Dark steps"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "step",
+      "label": "Step",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "arrows",
+   "name": "Arrows",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Light arrows"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Dark arrows"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "arrow_width",
+      "label": "Arrow width",
+      "input": true,
+      "defaultValue": 20.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 120,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "thickness",
+      "label": "Thickness",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "slope",
+      "label": "Slope",
+      "input": true,
+      "defaultValue": 30.0,
+      "validate": {
+       "required": true,
+       "min": 10,
+       "max": 60,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "deg"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "star_and_cross",
+   "name": "Star and cross",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Stars"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Crosses"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "spacing",
+      "label": "Star width",
+      "input": true,
+      "defaultValue": 16.0,
+      "validate": {
+       "required": true,
+       "min": 6,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "ogee",
+   "name": "Ogee",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Dark ogees"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Light ogees"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "width",
+      "label": "Width",
+      "input": true,
+      "defaultValue": 14.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "height",
+      "label": "Height",
+      "input": true,
+      "defaultValue": 20.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "curve",
+      "label": "Curve",
+      "input": true,
+      "defaultValue": 12,
+      "validate": {
+       "required": true,
+       "min": 0,
+       "max": 20,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "%"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "lantern",
+   "name": "Lantern",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Light lanterns"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Dark lanterns"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "width",
+      "label": "Width",
+      "input": true,
+      "defaultValue": 14.0,
+      "validate": {
+       "required": true,
+       "min": 4,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "height",
+      "label": "Height",
+      "input": true,
+      "defaultValue": 24.0,
+      "validate": {
+       "required": true,
+       "min": 6,
+       "max": 100,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "curve",
+      "label": "Curve",
+      "input": true,
+      "defaultValue": 12,
+      "validate": {
+       "required": true,
+       "min": 0,
+       "max": 20,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "%"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "jigsaw",
+   "name": "Jigsaw",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Light pieces"
+    },
+    {
+     "group": "#5f6b75",
+     "label": "Dark pieces"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "piece",
+      "label": "Piece size",
+      "input": true,
+      "defaultValue": 14.0,
+      "validate": {
+       "required": true,
+       "min": 5,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "waves",
+   "name": "Waves",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Light waves"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Dark waves"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "wavelength",
+      "label": "Wave length",
+      "input": true,
+      "defaultValue": 24.0,
+      "validate": {
+       "required": true,
+       "min": 6,
+       "max": 120,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "band",
+      "label": "Band height",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "curve",
+      "label": "Curve",
+      "input": true,
+      "defaultValue": 12,
+      "validate": {
+       "required": true,
+       "min": 0,
+       "max": 25,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "%"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "soldier_course",
+   "name": "Soldier course",
+   "groups": [
+    {
+     "group": "#b5562f",
+     "label": "Lying bricks"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Standing bricks"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "brick_height",
+      "label": "Brick height",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "rows",
+      "label": "Rows between",
+      "input": true,
+      "defaultValue": 3,
+      "validate": {
+       "required": true,
+       "min": 1,
+       "max": 8,
+       "integer": true
+      },
+      "decimalLimit": 0,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      }
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.5,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "hexagons_squares",
+   "name": "Hexagons, squares and triangles",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Hexagons"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Squares"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Triangles"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 5.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "dodecagons",
+   "name": "Dodecagons and triangles",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Dodecagons"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Triangles"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 4.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 20,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "floorboards",
+   "name": "Floorboards",
+   "groups": [
+    {
+     "group": "#d9c49a",
+     "label": "Boards 1"
+    },
+    {
+     "group": "#d8b07a",
+     "label": "Boards 2"
+    },
+    {
+     "group": "#c48a50",
+     "label": "Boards 3"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "board_width",
+      "label": "Board width",
+      "input": true,
+      "defaultValue": 6.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 40,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "run",
+      "label": "Repeat length",
+      "input": true,
+      "defaultValue": 80.0,
+      "validate": {
+       "required": true,
+       "min": 20,
+       "max": 300,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "mosaic",
+   "name": "Mosaic",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Colour 1"
+    },
+    {
+     "group": "#3f7f8c",
+     "label": "Colour 2"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Colour 3"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "square",
+      "label": "Square size",
+      "input": true,
+      "defaultValue": 5.0,
+      "validate": {
+       "required": true,
+       "min": 2,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "hexagon_mosaic",
+   "name": "Hexagon mosaic",
+   "groups": [
+    {
+     "group": "#8ec3c9",
+     "label": "Colour 1"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Colour 2"
+    },
+    {
+     "group": "#efe3c8",
+     "label": "Colour 3"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "side",
+      "label": "Side length",
+      "input": true,
+      "defaultValue": 3.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 20,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.1"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.3,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  },
+  {
+   "id": "garden_lattice",
+   "name": "Garden lattice",
+   "groups": [
+    {
+     "group": "#efe3c8",
+     "label": "Squares"
+    },
+    {
+     "group": "#d9c49a",
+     "label": "Bars across"
+    },
+    {
+     "group": "#c4744f",
+     "label": "Bars along"
+    },
+    {
+     "group": "#2f4a6b",
+     "label": "Dots"
+    }
+   ],
+   "form": {
+    "components": [
+     {
+      "type": "number",
+      "key": "square",
+      "label": "Square size",
+      "input": true,
+      "defaultValue": 12.0,
+      "validate": {
+       "required": true,
+       "min": 3,
+       "max": 80,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "bar",
+      "label": "Bar width",
+      "input": true,
+      "defaultValue": 4.0,
+      "validate": {
+       "required": true,
+       "min": 1.5,
+       "max": 30,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.5"
+      },
+      "suffix": "mm"
+     },
+     {
+      "type": "number",
+      "key": "grout",
+      "label": "Grout",
+      "input": true,
+      "defaultValue": 0.4,
+      "validate": {
+       "required": true,
+       "min": 0.0,
+       "max": 3.0,
+       "integer": false
+      },
+      "decimalLimit": 3,
+      "requireDecimal": false,
+      "delimiter": false,
+      "properties": {
+       "step": "0.05"
+      },
+      "suffix": "mm",
+      "description": "The groove between tiles that shows each tile."
+     }
+    ]
+   },
+   "presets": []
+  }
+ ],
+ "scatters": {
+  "36_3_11": [
+   2,
+   0,
+   1,
+   2,
+   1,
+   0,
+   2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   0,
+   2,
+   0,
+   0,
+   1,
+   2,
+   0,
+   1,
+   1,
+   2,
+   0,
+   2,
+   2,
+   2,
+   1
+  ],
+  "24_3_5": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   2,
+   2,
+   0,
+   2,
+   2,
+   1,
+   1,
+   2,
+   0,
+   1,
+   2,
+   2,
+   2,
+   1
+  ]
+ },
+ "old_families": {
+  "herringbone": [
+   "herringbone",
+   {
+    "layout": "diagonal"
+   }
+  ],
+  "herringbone_strip": [
+   "herringbone",
+   {
+    "layout": "diagonal"
+   }
+  ],
+  "herringbone_square": [
+   "herringbone",
+   {
+    "layout": "square"
+   }
+  ]
+ }
+}

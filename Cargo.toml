@@ -1,0 +1,36 @@
+# TessaFab, the open source engine and command line. See README.md.
+#
+# crates/pattern  patterns and assemblies, no file format
+# crates/engine   the G-code engine built on it (tessafab-core)
+# crates/server   the engine server (JSON-RPC over stdio)
+# crates/cli      the `tessafab` command line and slicer hook
+# crates/dev      a developer tool for the regression checks
+#
+# Nothing here may depend on TessaFab Pro (crates/engine/tests/boundary.rs).
+[workspace]
+resolver = "2"
+members = ["crates/pattern", "crates/engine", "crates/server", "crates/cli", "crates/dev"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.85"
+
+[workspace.dependencies]
+tessafab-pattern = { path = "crates/pattern" }
+tessafab-core = { path = "crates/engine" }
+geo = "0.33"
+i_overlay = "9"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+zip = { version = "9", default-features = false, features = ["deflate"] }
+flate2 = "1"
+crc32fast = "1"
+roxmltree = "0.21"
+rstar = "0.12"
+md5 = { package = "md-5", version = "0.11" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

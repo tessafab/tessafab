@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Waves pattern for TessaFab (made by pattern_library.py)
+     Wavy bands 6 mm tall, one wave every 24 mm, 0.4 mm grout.
+     The page is one repeat (24 x 12 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="24.0000mm" height="12.0000mm" viewBox="0 0 24.0000 12.0000"
+     data-pattern="{&quot;id&quot;: &quot;waves&quot;, &quot;values&quot;: {&quot;band&quot;: 6.0, &quot;curve&quot;: 12, &quot;grout&quot;: 0.4, &quot;wavelength&quot;: 24.0}}">
+<title>Waves</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#8ec3c9" points="0.0000,12.0000 1.0000,11.2546 2.0000,10.5600 3.0000,9.9635 4.0000,9.5058 5.0000,9.2181 6.0000,9.1200 7.0000,9.2181 8.0000,9.5058 9.0000,9.9635 10.0000,10.5600 11.0000,11.2546 12.0000,12.0000 13.0000,12.7454 14.0000,13.4400 15.0000,14.0365 16.0000,14.4942 17.0000,14.7819 18.0000,14.8800 19.0000,14.7819 20.0000,14.4942 21.0000,14.0365 22.0000,13.4400 23.0000,12.7454 24.0000,12.0000 24.0000,6.0000 23.0000,6.7454 22.0000,7.4400 21.0000,8.0365 20.0000,8.4942 19.0000,8.7819 18.0000,8.8800 17.0000,8.7819 16.0000,8.4942 15.0000,8.0365 14.0000,7.4400 13.0000,6.7454 12.0000,6.0000 11.0000,5.2546 10.0000,4.5600 9.0000,3.9635 8.0000,3.5058 7.0000,3.2181 6.0000,3.1200 5.0000,3.2181 4.0000,3.5058 3.0000,3.9635 2.0000,4.5600 1.0000,5.2546 0.0000,6.0000"/>
+  <polygon fill="#2f4a6b" points="0.0000,6.0000 1.0000,5.2546 2.0000,4.5600 3.0000,3.9635 4.0000,3.5058 5.0000,3.2181 6.0000,3.1200 7.0000,3.2181 8.0000,3.5058 9.0000,3.9635 10.0000,4.5600 11.0000,5.2546 12.0000,6.0000 13.0000,6.7454 14.0000,7.4400 15.0000,8.0365 16.0000,8.4942 17.0000,8.7819 18.0000,8.8800 19.0000,8.7819 20.0000,8.4942 21.0000,8.0365 22.0000,7.4400 23.0000,6.7454 24.0000,6.0000 24.0000,0.0000 23.0000,0.7454 22.0000,1.4400 21.0000,2.0365 20.0000,2.4942 19.0000,2.7819 18.0000,2.8800 17.0000,2.7819 16.0000,2.4942 15.0000,2.0365 14.0000,1.4400 13.0000,0.7454 12.0000,0.0000 11.0000,-0.7454 10.0000,-1.4400 9.0000,-2.0365 8.0000,-2.4942 7.0000,-2.7819 6.0000,-2.8800 5.0000,-2.7819 4.0000,-2.4942 3.0000,-2.0365 2.0000,-1.4400 1.0000,-0.7454 0.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="4.3350" y1="9.0000" x2="19.6650" y2="9.0000"/>   <!-- #8ec3c9 tiles: lines at 0 deg -->
+  <line x1="4.3350" y1="3.0000" x2="19.6650" y2="3.0000"/>   <!-- #2f4a6b tiles: lines at 0 deg -->
+</g>
+</svg>

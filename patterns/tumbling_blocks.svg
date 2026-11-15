@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tumbling blocks pattern for TessaFab (made by pattern_library.py)
+     Rhombi with 8 mm sides in three directions, 0.5 mm grout.
+     The page is one repeat (13.86 x 24 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="13.8564mm" height="24.0000mm" viewBox="0 0 13.8564 24.0000"
+     data-pattern="{&quot;id&quot;: &quot;tumbling_blocks&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.5, &quot;side&quot;: 8.0}}">
+<title>Tumbling blocks</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.5" stroke-linejoin="miter">
+  <polygon fill="#f0dcb4" points="0.0000,24.0000 6.9282,20.0000 0.0000,16.0000 -6.9282,20.0000"/>
+  <polygon fill="#f0dcb4" points="6.9282,12.0000 13.8564,8.0000 6.9282,4.0000 -0.0000,8.0000"/>
+  <polygon fill="#b4783c" points="6.9282,12.0000 -0.0000,8.0000 0.0000,16.0000 6.9282,20.0000"/>
+  <polygon fill="#b4783c" points="13.8564,0.0000 6.9282,-4.0000 6.9282,4.0000 13.8564,8.0000"/>
+  <polygon fill="#784620" points="0.0000,0.0000 -0.0000,8.0000 6.9282,4.0000 6.9282,-4.0000"/>
+  <polygon fill="#784620" points="6.9282,12.0000 6.9282,20.0000 13.8564,16.0000 13.8564,8.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="2.7982" y1="8.0000" x2="11.0582" y2="8.0000"/>   <!-- #f0dcb4 tiles: lines at 0 deg -->
+  <line x1="2.6066" y1="15.4852" x2="4.3216" y2="12.5148"/>   <!-- #b4783c tiles: lines at 60 deg -->
+  <line x1="9.5348" y1="12.5148" x2="11.2498" y2="15.4852"/>   <!-- #784620 tiles: lines at -60 deg -->
+</g>
+</svg>

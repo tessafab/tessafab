@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Arrows pattern for TessaFab (made by pattern_library.py)
+     Stacked chevron tiles 20 mm wide and 6 mm thick, 0.4 mm grout.
+     The page is one repeat (20 x 12 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="20.0000mm" height="12.0000mm" viewBox="0 0 20.0000 12.0000"
+     data-pattern="{&quot;id&quot;: &quot;arrows&quot;, &quot;values&quot;: {&quot;arrow_width&quot;: 20.0, &quot;grout&quot;: 0.4, &quot;slope&quot;: 30.0, &quot;thickness&quot;: 6.0}}">
+<title>Arrows</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d9c49a" points="0.0000,12.0000 10.0000,6.2265 20.0000,12.0000 20.0000,6.0000 10.0000,0.2265 0.0000,6.0000"/>
+  <polygon fill="#2f4a6b" points="0.0000,6.0000 10.0000,0.2265 20.0000,6.0000 20.0000,0.0000 10.0000,-5.7735 0.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="10.0000" cy="6.1132" r="1.20"/>   <!-- #d9c49a tiles: concentric rings -->
+  <circle cx="10.0000" cy="0.1132" r="1.20"/>   <!-- #2f4a6b tiles: concentric rings -->
+</g>
+</svg>

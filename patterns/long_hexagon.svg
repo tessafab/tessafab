@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elongated hexagon pattern for TessaFab (made by pattern_library.py)
+     Long hexagons (14 mm flat sides, 8 mm tall) in staggered rows, 0.4 mm grout.
+     The page is one repeat (32.62 x 8 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="32.6188mm" height="8.0000mm" viewBox="0 0 32.6188 8.0000"
+     data-pattern="{&quot;id&quot;: &quot;long_hexagon&quot;, &quot;values&quot;: {&quot;flat_length&quot;: 14.0, &quot;grout&quot;: 0.4, &quot;height&quot;: 8.0}}">
+<title>Elongated hexagon</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d9c49a" points="0.0000,4.0000 2.3094,8.0000 16.3094,8.0000 18.6188,4.0000 16.3094,0.0000 2.3094,0.0000"/>
+  <polygon fill="#c4744f" points="16.3094,8.0000 18.6188,12.0000 32.6188,12.0000 34.9282,8.0000 32.6188,4.0000 18.6188,4.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="3.4994" y1="4.0000" x2="15.1194" y2="4.0000"/>   <!-- #d9c49a tiles: lines at 0 deg -->
+  <line x1="19.8088" y1="8.0000" x2="31.4288" y2="8.0000"/>   <!-- #c4744f tiles: lines at 0 deg -->
+</g>
+</svg>

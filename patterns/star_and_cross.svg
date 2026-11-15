@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Star and cross pattern for TessaFab (made by pattern_library.py)
+     Eight-point stars 16 mm across with crosses between them, 0.4 mm grout.
+     The page is one repeat (16 x 16 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="16.0000mm" height="16.0000mm" viewBox="0 0 16.0000 16.0000"
+     data-pattern="{&quot;id&quot;: &quot;star_and_cross&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;spacing&quot;: 16.0}}">
+<title>Star and cross</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="8.0000,16.0000 5.6569,18.3431 5.6569,21.6569 2.3431,21.6569 0.0000,24.0000 -2.3431,21.6569 -5.6569,21.6569 -5.6569,18.3431 -8.0000,16.0000 -5.6569,13.6569 -5.6569,10.3431 -2.3431,10.3431 0.0000,8.0000 2.3431,10.3431 5.6569,10.3431 5.6569,13.6569"/>
+  <polygon fill="#3f7f8c" points="5.6569,13.6569 5.6569,10.3431 2.3431,10.3431 0.0000,8.0000 2.3431,5.6569 5.6569,5.6569 5.6569,2.3431 8.0000,0.0000 10.3431,2.3431 10.3431,5.6569 13.6569,5.6569 16.0000,8.0000 13.6569,10.3431 10.3431,10.3431 10.3431,13.6569 8.0000,16.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="-0.0000" cy="16.0000" r="1.20"/>   <!-- #efe3c8 tiles: concentric rings -->
+  <line x1="6.8616" y1="9.1384" x2="9.1384" y2="6.8616"/>   <!-- #3f7f8c tiles: lines at 45 deg -->
+</g>
+</svg>

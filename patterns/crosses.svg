@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Crosses pattern for TessaFab (made by pattern_library.py)
+     Interlocking crosses with 5 mm arms in two colours, 0.4 mm grout.
+     The page is one repeat (25 x 50 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="25.0000mm" height="50.0000mm" viewBox="0 0 25.0000 50.0000"
+     data-pattern="{&quot;id&quot;: &quot;crosses&quot;, &quot;values&quot;: {&quot;arm&quot;: 5.0, &quot;grout&quot;: 0.4}}">
+<title>Crosses</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="-2.5000,57.5000 2.5000,57.5000 2.5000,52.5000 7.5000,52.5000 7.5000,47.5000 2.5000,47.5000 2.5000,42.5000 -2.5000,42.5000 -2.5000,47.5000 -7.5000,47.5000 -7.5000,52.5000 -2.5000,52.5000"/>
+  <polygon fill="#efe3c8" points="17.5000,47.5000 22.5000,47.5000 22.5000,42.5000 27.5000,42.5000 27.5000,37.5000 22.5000,37.5000 22.5000,32.5000 17.5000,32.5000 17.5000,37.5000 12.5000,37.5000 12.5000,42.5000 17.5000,42.5000"/>
+  <polygon fill="#efe3c8" points="12.5000,37.5000 17.5000,37.5000 17.5000,32.5000 22.5000,32.5000 22.5000,27.5000 17.5000,27.5000 17.5000,22.5000 12.5000,22.5000 12.5000,27.5000 7.5000,27.5000 7.5000,32.5000 12.5000,32.5000"/>
+  <polygon fill="#efe3c8" points="7.5000,27.5000 12.5000,27.5000 12.5000,22.5000 17.5000,22.5000 17.5000,17.5000 12.5000,17.5000 12.5000,12.5000 7.5000,12.5000 7.5000,17.5000 2.5000,17.5000 2.5000,22.5000 7.5000,22.5000"/>
+  <polygon fill="#efe3c8" points="2.5000,17.5000 7.5000,17.5000 7.5000,12.5000 12.5000,12.5000 12.5000,7.5000 7.5000,7.5000 7.5000,2.5000 2.5000,2.5000 2.5000,7.5000 -2.5000,7.5000 -2.5000,12.5000 2.5000,12.5000"/>
+  <polygon fill="#3f7f8c" points="7.5000,52.5000 12.5000,52.5000 12.5000,47.5000 17.5000,47.5000 17.5000,42.5000 12.5000,42.5000 12.5000,37.5000 7.5000,37.5000 7.5000,42.5000 2.5000,42.5000 2.5000,47.5000 7.5000,47.5000"/>
+  <polygon fill="#3f7f8c" points="2.5000,42.5000 7.5000,42.5000 7.5000,37.5000 12.5000,37.5000 12.5000,32.5000 7.5000,32.5000 7.5000,27.5000 2.5000,27.5000 2.5000,32.5000 -2.5000,32.5000 -2.5000,37.5000 2.5000,37.5000"/>
+  <polygon fill="#3f7f8c" points="-2.5000,32.5000 2.5000,32.5000 2.5000,27.5000 7.5000,27.5000 7.5000,22.5000 2.5000,22.5000 2.5000,17.5000 -2.5000,17.5000 -2.5000,22.5000 -7.5000,22.5000 -7.5000,27.5000 -2.5000,27.5000"/>
+  <polygon fill="#3f7f8c" points="17.5000,22.5000 22.5000,22.5000 22.5000,17.5000 27.5000,17.5000 27.5000,12.5000 22.5000,12.5000 22.5000,7.5000 17.5000,7.5000 17.5000,12.5000 12.5000,12.5000 12.5000,17.5000 17.5000,17.5000"/>
+  <polygon fill="#3f7f8c" points="12.5000,12.5000 17.5000,12.5000 17.5000,7.5000 22.5000,7.5000 22.5000,2.5000 17.5000,2.5000 17.5000,-2.5000 12.5000,-2.5000 12.5000,2.5000 7.5000,2.5000 7.5000,7.5000 12.5000,7.5000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="13.7626" y1="31.2374" x2="16.2374" y2="28.7626"/>   <!-- #efe3c8 tiles: lines at 45 deg -->
+  <line x1="3.7626" y1="33.7626" x2="6.2374" y2="36.2374"/>   <!-- #3f7f8c tiles: lines at -45 deg -->
+</g>
+</svg>

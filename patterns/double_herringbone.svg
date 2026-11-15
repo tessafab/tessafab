@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Double herringbone pattern for TessaFab (made by pattern_library.py)
+     Pairs of 3 x 18 mm planks at 45 deg, zig-zag along x, 0.4 mm grout.
+     The page is one repeat (8.485 x 25.46 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="8.4853mm" height="25.4558mm" viewBox="0 0 8.4853 25.4558"
+     data-pattern="{&quot;id&quot;: &quot;double_herringbone&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;plank_ratio&quot;: 3, &quot;plank_width&quot;: 3.0}}">
+<title>Double herringbone</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="0.0000,0.0000 12.7279,12.7279 14.8492,10.6066 2.1213,-2.1213"/>
+  <polygon fill="#d8b07a" points="-6.3640,-2.1213 6.3640,10.6066 8.4853,8.4853 -4.2426,-4.2426"/>
+  <polygon fill="#9c6a3c" points="-4.2426,21.2132 -2.1213,23.3345 10.6066,10.6066 8.4853,8.4853"/>
+  <polygon fill="#9c6a3c" points="-2.1213,23.3345 0.0000,25.4558 12.7279,12.7279 10.6066,10.6066"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="3.4595" y1="1.3382" x2="11.3544" y2="9.2330"/>   <!-- #d8b07a tiles: lines at -45 deg -->
+  <line x1="-0.7778" y1="19.8697" x2="7.1418" y2="11.9501"/>   <!-- #9c6a3c tiles: lines at 45 deg -->
+</g>
+</svg>

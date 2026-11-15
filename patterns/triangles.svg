@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Triangles pattern for TessaFab (made by pattern_library.py)
+     Triangles with 10 mm sides, pointing up and down in turn, 0.4 mm grout.
+     The page is one repeat (10 x 17.32 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="10.0000mm" height="17.3205mm" viewBox="0 0 10.0000 17.3205"
+     data-pattern="{&quot;id&quot;: &quot;triangles&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;side&quot;: 10.0}}">
+<title>Triangles</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#8ec3c9" points="-5.0000,8.6603 5.0000,8.6603 0.0000,0.0000"/>
+  <polygon fill="#8ec3c9" points="0.0000,17.3205 10.0000,17.3205 5.0000,8.6603"/>
+  <polygon fill="#2f4a6b" points="0.0000,17.3205 5.0000,8.6603 -5.0000,8.6603"/>
+  <polygon fill="#2f4a6b" points="5.0000,8.6603 10.0000,0.0000 0.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="4.1950" y1="15.8281" x2="5.8050" y2="13.0395"/>   <!-- #8ec3c9 tiles: lines at 60 deg -->
+  <line x1="4.1950" y1="1.4925" x2="5.8050" y2="4.2811"/>   <!-- #2f4a6b tiles: lines at -60 deg -->
+</g>
+</svg>

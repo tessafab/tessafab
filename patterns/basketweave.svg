@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Basketweave pattern for TessaFab (made by pattern_library.py)
+     Planks 5 x 10 mm in pairs, every other pair turned 90 deg, 0.4 mm grout.
+     The page is one repeat (20 x 20 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="20.0000mm" height="20.0000mm" viewBox="0 0 20.0000 20.0000"
+     data-pattern="{&quot;id&quot;: &quot;basketweave&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;plank_width&quot;: 5.0, &quot;planks&quot;: 2}}">
+<title>Basketweave</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="0.0000,20.0000 10.0000,20.0000 10.0000,15.0000 0.0000,15.0000"/>
+  <polygon fill="#d8b07a" points="10.0000,10.0000 20.0000,10.0000 20.0000,5.0000 10.0000,5.0000"/>
+  <polygon fill="#d8b07a" points="0.0000,15.0000 10.0000,15.0000 10.0000,10.0000 0.0000,10.0000"/>
+  <polygon fill="#d8b07a" points="10.0000,5.0000 20.0000,5.0000 20.0000,0.0000 10.0000,0.0000"/>
+  <polygon fill="#9c6a3c" points="0.0000,10.0000 5.0000,10.0000 5.0000,0.0000 0.0000,0.0000"/>
+  <polygon fill="#9c6a3c" points="10.0000,20.0000 15.0000,20.0000 15.0000,10.0000 10.0000,10.0000"/>
+  <polygon fill="#9c6a3c" points="5.0000,10.0000 10.0000,10.0000 10.0000,0.0000 5.0000,0.0000"/>
+  <polygon fill="#9c6a3c" points="15.0000,20.0000 20.0000,20.0000 20.0000,10.0000 15.0000,10.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="12.2000" y1="7.5000" x2="17.8000" y2="7.5000"/>   <!-- #d8b07a tiles: lines at 0 deg -->
+  <line x1="12.5000" y1="17.8000" x2="12.5000" y2="12.2000"/>   <!-- #9c6a3c tiles: lines at 90 deg -->
+</g>
+</svg>

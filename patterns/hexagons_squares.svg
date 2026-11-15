@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hexagons, squares and triangles pattern for TessaFab (made by pattern_library.py)
+     Hexagons ringed by squares and triangles, 5 mm sides (rhombitrihexagonal), 0.3 mm grout.
+     The page is one repeat (23.66 x 13.66 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="23.6603mm" height="13.6603mm" viewBox="0 0 23.6603 13.6603"
+     data-pattern="{&quot;id&quot;: &quot;hexagons_squares&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.3, &quot;side&quot;: 5.0}}">
+<title>Hexagons, squares and triangles</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.3" stroke-linejoin="miter">
+  <polygon fill="#d9c49a" points="5.0000,13.6603 2.5000,9.3301 -2.5000,9.3301 -5.0000,13.6603 -2.5000,17.9904 2.5000,17.9904"/>
+  <polygon fill="#d9c49a" points="16.8301,6.8301 14.3301,2.5000 9.3301,2.5000 6.8301,6.8301 9.3301,11.1603 14.3301,11.1603"/>
+  <polygon fill="#3f7f8c" points="5.0000,13.6603 9.3301,11.1603 6.8301,6.8301 2.5000,9.3301"/>
+  <polygon fill="#3f7f8c" points="16.8301,6.8301 21.1603,4.3301 18.6603,0.0000 14.3301,2.5000"/>
+  <polygon fill="#3f7f8c" points="2.5000,9.3301 2.5000,4.3301 -2.5000,4.3301 -2.5000,9.3301"/>
+  <polygon fill="#3f7f8c" points="14.3301,16.1603 14.3301,11.1603 9.3301,11.1603 9.3301,16.1603"/>
+  <polygon fill="#3f7f8c" points="9.3301,2.5000 5.0000,0.0000 2.5000,4.3301 6.8301,6.8301"/>
+  <polygon fill="#3f7f8c" points="21.1603,9.3301 16.8301,6.8301 14.3301,11.1603 18.6603,13.6603"/>
+  <polygon fill="#efe3c8" points="5.0000,13.6603 9.3301,16.1603 9.3301,11.1603"/>
+  <polygon fill="#efe3c8" points="16.8301,6.8301 21.1603,9.3301 21.1603,4.3301"/>
+  <polygon fill="#efe3c8" points="2.5000,9.3301 6.8301,6.8301 2.5000,4.3301"/>
+  <polygon fill="#efe3c8" points="14.3301,16.1603 18.6603,13.6603 14.3301,11.1603"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="11.8301" cy="6.8301" r="1.20"/>   <!-- #d9c49a tiles: concentric rings -->
+  <line x1="4.6201" y1="10.2452" x2="7.2101" y2="10.2452"/>   <!-- #3f7f8c tiles: lines at 0 deg -->
+  <line x1="6.3743" y1="13.6603" x2="7.9493" y2="13.6603"/>   <!-- #efe3c8 tiles: lines at 0 deg -->
+</g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Octagon and dot pattern for TessaFab (made by pattern_library.py)
+     12 mm octagons with small square dots between them, 0.4 mm grout.
+     The page is one repeat (12 x 12 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="12.0000mm" height="12.0000mm" viewBox="0 0 12.0000 12.0000"
+     data-pattern="{&quot;id&quot;: &quot;octagon_dot&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;octagon&quot;: 12.0}}">
+<title>Octagon and dot</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="3.5147,12.0000 8.4853,12.0000 12.0000,8.4853 12.0000,3.5147 8.4853,0.0000 3.5147,0.0000 0.0000,3.5147 0.0000,8.4853"/>
+  <polygon fill="#2f4a6b" points="3.5147,12.0000 0.0000,8.4853 -3.5147,12.0000 0.0000,15.5147"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="6.0000" cy="6.0000" r="1.20"/>   <!-- #efe3c8 tiles: concentric rings -->
+  <line x1="-0.7177" y1="12.7177" x2="0.7177" y2="11.2823"/>   <!-- #2f4a6b tiles: lines at 45 deg -->
+</g>
+</svg>

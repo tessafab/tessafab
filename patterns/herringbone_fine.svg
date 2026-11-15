@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Herringbone, Fine pattern for TessaFab (made by pattern_library.py)
+     Planks 3.5 x 14 mm at 45 deg, 0.4 mm grout, zig-zag along x.
+     The page is one repeat (4.95 x 19.8 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="4.9497mm" height="19.7990mm" viewBox="0 0 4.9497 19.7990"
+     data-pattern="{&quot;id&quot;: &quot;herringbone&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;layout&quot;: &quot;diagonal&quot;, &quot;plank_ratio&quot;: 4, &quot;plank_width&quot;: 3.5}}">
+<title>Herringbone, Fine</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="-4.9497,0.0000 4.9497,9.8995 7.4246,7.4246 -2.4749,-2.4749"/>
+  <polygon fill="#9c6a3c" points="-2.4749,17.3241 0.0000,19.7990 9.8995,9.8995 7.4246,7.4246"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="-1.7324" y1="0.7425" x2="4.2073" y2="6.6822"/>   <!-- #d8b07a tiles: lines at -45 deg -->
+  <line x1="0.7425" y1="16.5817" x2="6.6822" y2="10.6420"/>   <!-- #9c6a3c tiles: lines at 45 deg -->
+</g>
+</svg>

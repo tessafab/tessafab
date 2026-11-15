@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Squares and triangles pattern for TessaFab (made by pattern_library.py)
+     Rows of 8 mm squares between rows of triangles, 0.4 mm grout.
+     The page is one repeat (8 x 29.86 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="8.0000mm" height="29.8564mm" viewBox="0 0 8.0000 29.8564"
+     data-pattern="{&quot;id&quot;: &quot;squares_triangles&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;side&quot;: 8.0}}">
+<title>Squares and triangles</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="-4.0000,14.9282 4.0000,14.9282 4.0000,6.9282 -4.0000,6.9282"/>
+  <polygon fill="#efe3c8" points="0.0000,29.8564 8.0000,29.8564 8.0000,21.8564 0.0000,21.8564"/>
+  <polygon fill="#c4744f" points="-4.0000,6.9282 4.0000,6.9282 0.0000,0.0000"/>
+  <polygon fill="#c4744f" points="0.0000,21.8564 8.0000,21.8564 4.0000,14.9282"/>
+  <polygon fill="#5f6b75" points="0.0000,21.8564 4.0000,14.9282 -4.0000,14.9282"/>
+  <polygon fill="#5f6b75" points="4.0000,6.9282 8.0000,0.0000 0.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="-2.1000" y1="10.9282" x2="2.1000" y2="10.9282"/>   <!-- #efe3c8 tiles: lines at 0 deg -->
+  <line x1="3.4225" y1="20.5473" x2="4.5775" y2="18.5467"/>   <!-- #c4744f tiles: lines at 60 deg -->
+  <line x1="-0.5775" y1="16.2373" x2="0.5775" y2="18.2379"/>   <!-- #5f6b75 tiles: lines at -60 deg -->
+</g>
+</svg>

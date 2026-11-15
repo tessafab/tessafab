@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Floorboards pattern for TessaFab (made by pattern_library.py)
+     6 mm boards in staggered lengths (the joints repeat every 80 mm), 0.3 mm grout.
+     The page is one repeat (80 x 36 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="80.0000mm" height="36.0000mm" viewBox="0 0 80.0000 36.0000"
+     data-pattern="{&quot;id&quot;: &quot;floorboards&quot;, &quot;values&quot;: {&quot;board_width&quot;: 6.0, &quot;grout&quot;: 0.3, &quot;run&quot;: 80.0}}">
+<title>Floorboards</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.3" stroke-linejoin="miter">
+  <polygon fill="#d9c49a" points="0.0000,36.0000 44.0000,36.0000 44.0000,30.0000 0.0000,30.0000"/>
+  <polygon fill="#d9c49a" points="44.0000,36.0000 80.0000,36.0000 80.0000,30.0000 44.0000,30.0000"/>
+  <polygon fill="#d8b07a" points="30.5600,30.0000 74.5600,30.0000 74.5600,24.0000 30.5600,24.0000"/>
+  <polygon fill="#d8b07a" points="-5.4400,30.0000 30.5600,30.0000 30.5600,24.0000 -5.4400,24.0000"/>
+  <polygon fill="#c48a50" points="-18.8800,24.0000 25.1200,24.0000 25.1200,18.0000 -18.8800,18.0000"/>
+  <polygon fill="#c48a50" points="25.1200,24.0000 61.1200,24.0000 61.1200,18.0000 25.1200,18.0000"/>
+  <polygon fill="#d9c49a" points="11.6800,18.0000 55.6800,18.0000 55.6800,12.0000 11.6800,12.0000"/>
+  <polygon fill="#d9c49a" points="55.6800,18.0000 91.6800,18.0000 91.6800,12.0000 55.6800,12.0000"/>
+  <polygon fill="#d8b07a" points="42.2400,12.0000 86.2400,12.0000 86.2400,6.0000 42.2400,6.0000"/>
+  <polygon fill="#d8b07a" points="6.2400,12.0000 42.2400,12.0000 42.2400,6.0000 6.2400,6.0000"/>
+  <polygon fill="#c48a50" points="-7.2000,6.0000 36.8000,6.0000 36.8000,0.0000 -7.2000,0.0000"/>
+  <polygon fill="#c48a50" points="36.8000,6.0000 72.8000,6.0000 72.8000,0.0000 36.8000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="19.0150" y1="15.0000" x2="48.3450" y2="15.0000"/>   <!-- #d9c49a tiles: lines at 0 deg -->
+  <line x1="37.8950" y1="27.0000" x2="67.2250" y2="27.0000"/>   <!-- #d8b07a tiles: lines at 0 deg -->
+  <line x1="31.2550" y1="21.0000" x2="54.9850" y2="21.0000"/>   <!-- #c48a50 tiles: lines at 0 deg -->
+</g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Stack bond, Vertical pattern for TessaFab (made by pattern_library.py)
+     8 x 24 mm tiles in straight rows and columns, 0.4 mm grout.
+     The page is one repeat (8 x 24 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="8.0000mm" height="24.0000mm" viewBox="0 0 8.0000 24.0000"
+     data-pattern="{&quot;id&quot;: &quot;stack_bond&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;tile_height&quot;: 24.0, &quot;tile_length&quot;: 8.0}}">
+<title>Stack bond, Vertical</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="0.0000,24.0000 8.0000,24.0000 8.0000,0.0000 0.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="1.9000" y1="12.0000" x2="6.1000" y2="12.0000"/>   <!-- #efe3c8 tiles: lines at 0 deg -->
+</g>
+</svg>

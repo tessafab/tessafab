@@ -1,0 +1,19 @@
+[package]
+name = "tessafab-cli"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license = "LicenseRef-PolyForm-Noncommercial-1.0.0"
+description = "TessaFab command-line tool and slicer hook: pattern a sliced plate with a saved project"
+publish = false
+
+[lib]
+name = "tessafab_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "tessafab"
+path = "src/main.rs"
+
+[dependencies]
+tessafab-core.workspace = true

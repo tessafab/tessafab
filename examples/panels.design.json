@@ -1,0 +1,194 @@
+{
+ "model": "panels",
+ "about": "Five panels on two plates: plain (turned 45 degrees on the bed), with a window, 4 mm thick, with a 6 mm boss standing on it, and an L; they assemble into a wall.",
+ "pieces": [
+  {
+   "name": "plain",
+   "plate": 1,
+   "outline": [
+    [
+     -60.0,
+     -25.0
+    ],
+    [
+     60.0,
+     -25.0
+    ],
+    [
+     60.0,
+     25.0
+    ],
+    [
+     -60.0,
+     25.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     80.0
+    ],
+    "rotation": 45
+   },
+   "assembly": {
+    "position": [
+     60.0,
+     25.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "window",
+   "plate": 1,
+   "outline": [
+    [
+     -60.0,
+     -25.0
+    ],
+    [
+     60.0,
+     -25.0
+    ],
+    [
+     60.0,
+     25.0
+    ],
+    [
+     -60.0,
+     25.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     195.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     60.0,
+     75.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "thick",
+   "plate": 2,
+   "outline": [
+    [
+     -30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     30.0
+    ],
+    [
+     -30.0,
+     30.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     70.0,
+     80.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     150.0,
+     30.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "boss",
+   "plate": 2,
+   "outline": [
+    [
+     -30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     30.0
+    ],
+    [
+     -30.0,
+     30.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     180.0,
+     80.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     150.0,
+     90.0
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "ell",
+   "plate": 2,
+   "outline": [
+    [
+     -30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     -30.0
+    ],
+    [
+     30.0,
+     -5.0
+    ],
+    [
+     -5.0,
+     -5.0
+    ],
+    [
+     -5.0,
+     30.0
+    ],
+    [
+     -30.0,
+     30.0
+    ]
+   ],
+   "bed": {
+    "position": [
+     117.6401,
+     171.19273
+    ],
+    "rotation": 30
+   },
+   "assembly": {
+    "position": [
+     203.55263,
+     23.55263
+    ],
+    "rotation": 0
+   }
+  }
+ ]
+}

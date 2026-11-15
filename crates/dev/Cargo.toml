@@ -1,0 +1,17 @@
+[package]
+name = "pp-dev"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license = "LicenseRef-PolyForm-Noncommercial-1.0.0"
+description = "Developer tool for the Rust engine port (used by parity/)"
+publish = false
+
+[[bin]]
+name = "pp-dev"
+path = "src/main.rs"
+
+[dependencies]
+tessafab-core.workspace = true
+serde_json.workspace = true
+geo.workspace = true

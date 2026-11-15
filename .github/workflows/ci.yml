@@ -1,0 +1,39 @@
+name: CI
+
+# Every push and pull request: format, lint, test and build the engine and the
+# command line on macOS, Windows and Linux.
+#
+# This folder is published as github.com/tessafab/tessafab from the TessaFab
+# platform repository (git subtree), where it sits at oss/; GitHub runs this
+# workflow only in the public repository, at its root.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  engine:
+    name: Engine (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Rust toolchain
+        shell: bash
+        run: rustup toolchain install stable --profile minimal -c clippy,rustfmt && rustup default stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test
+      - run: cargo build --release
+      - name: The command line runs
+        shell: bash
+        run: ./target/release/tessafab --help

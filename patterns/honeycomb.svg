@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Honeycomb pattern for TessaFab (made by pattern_library.py)
+     Hexagons with 6 mm sides, concentric rings, 0.6 mm grout.
+     The page is one repeat (18 x 10.39 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="18.0000mm" height="10.3923mm" viewBox="0 0 18.0000 10.3923"
+     data-pattern="{&quot;id&quot;: &quot;honeycomb&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.6, &quot;side&quot;: 6.0}}">
+<title>Honeycomb</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.6" stroke-linejoin="miter">
+  <polygon fill="#e0b040" points="6.0000,10.3923 3.0000,5.1962 -3.0000,5.1962 -6.0000,10.3923 -3.0000,15.5885 3.0000,15.5885"/>
+  <polygon fill="#e0b040" points="15.0000,5.1962 12.0000,0.0000 6.0000,0.0000 3.0000,5.1962 6.0000,10.3923 12.0000,10.3923"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <circle cx="9.0000" cy="5.1962" r="1.20"/>   <!-- #e0b040 tiles: concentric rings -->
+</g>
+</svg>

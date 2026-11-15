@@ -1,0 +1,150 @@
+{
+ "model": "frame",
+ "about": "A picture frame, 210 x 160 mm, as four strips mitred at the corners on one plate; they assemble into the frame.",
+ "pieces": [
+  {
+   "name": "bottom",
+   "plate": 1,
+   "outline": [
+    [
+     -104.63787,
+     -14.90684
+    ],
+    [
+     104.63787,
+     -14.90684
+    ],
+    [
+     72.93787,
+     16.79316
+    ],
+    [
+     -72.93787,
+     16.79316
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     40.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     105.0,
+     15.05684
+    ],
+    "rotation": 0
+   }
+  },
+  {
+   "name": "right",
+   "plate": 1,
+   "outline": [
+    [
+     -79.63787,
+     -14.5372
+    ],
+    [
+     79.63787,
+     -14.5372
+    ],
+    [
+     47.93787,
+     17.1628
+    ],
+    [
+     -47.93787,
+     17.1628
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     100.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     195.3128,
+     80.0
+    ],
+    "rotation": 90
+   }
+  },
+  {
+   "name": "top",
+   "plate": 1,
+   "outline": [
+    [
+     -104.63787,
+     -14.90684
+    ],
+    [
+     104.63787,
+     -14.90684
+    ],
+    [
+     72.93787,
+     16.79316
+    ],
+    [
+     -72.93787,
+     16.79316
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     160.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     105.0,
+     144.94316
+    ],
+    "rotation": 180
+   }
+  },
+  {
+   "name": "left",
+   "plate": 1,
+   "outline": [
+    [
+     -79.63787,
+     -14.5372
+    ],
+    [
+     79.63787,
+     -14.5372
+    ],
+    [
+     47.93787,
+     17.1628
+    ],
+    [
+     -47.93787,
+     17.1628
+    ]
+   ],
+   "bed": {
+    "position": [
+     128.0,
+     220.0
+    ],
+    "rotation": 0
+   },
+   "assembly": {
+    "position": [
+     14.6872,
+     80.0
+    ],
+    "rotation": 270
+   }
+  }
+ ]
+}

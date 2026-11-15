@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pinwheel, Wide centre pattern for TessaFab (made by pattern_library.py)
+     Four 15 x 5 mm rectangles turning round a 10 mm square, 0.4 mm grout.
+     The page is one repeat (20 x 20 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="20.0000mm" height="20.0000mm" viewBox="0 0 20.0000 20.0000"
+     data-pattern="{&quot;id&quot;: &quot;pinwheel&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.4, &quot;rect_length&quot;: 15.0, &quot;rect_width&quot;: 5.0}}">
+<title>Pinwheel, Wide centre</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.4" stroke-linejoin="miter">
+  <polygon fill="#d8b07a" points="0.0000,20.0000 15.0000,20.0000 15.0000,15.0000 0.0000,15.0000"/>
+  <polygon fill="#9c6a3c" points="15.0000,20.0000 20.0000,20.0000 20.0000,5.0000 15.0000,5.0000"/>
+  <polygon fill="#d8b07a" points="5.0000,5.0000 20.0000,5.0000 20.0000,0.0000 5.0000,0.0000"/>
+  <polygon fill="#9c6a3c" points="0.0000,15.0000 5.0000,15.0000 5.0000,0.0000 0.0000,0.0000"/>
+  <polygon fill="#efe3c8" points="5.0000,15.0000 15.0000,15.0000 15.0000,5.0000 5.0000,5.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="2.9500" y1="17.5000" x2="12.0500" y2="17.5000"/>   <!-- #d8b07a tiles: lines at 0 deg -->
+  <line x1="17.5000" y1="17.0500" x2="17.5000" y2="7.9500"/>   <!-- #9c6a3c tiles: lines at 90 deg -->
+  <circle cx="10.0000" cy="10.0000" r="1.20"/>   <!-- #efe3c8 tiles: concentric rings -->
+</g>
+</svg>

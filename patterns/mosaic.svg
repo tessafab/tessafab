@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mosaic pattern for TessaFab (made by pattern_library.py)
+     5 mm squares in three colours, scattered, 0.3 mm grout.
+     The page is one repeat (30 x 30 mm): the pattern is copied every page width across and
+     every page height up, so tiles hanging over the page edge are completed by the next copy.
+     fill = tile; blue stroke = grout (width = groove in mm); light red = line direction per colour,
+     closed red loop = concentric rings. No black outlines: those come from the model's layout. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="30.0000mm" height="30.0000mm" viewBox="0 0 30.0000 30.0000"
+     data-pattern="{&quot;id&quot;: &quot;mosaic&quot;, &quot;values&quot;: {&quot;grout&quot;: 0.3, &quot;square&quot;: 5.0}}">
+<title>Mosaic</title>
+<g inkscape:groupmode="layer" inkscape:label="tiles" stroke="#0000ff" stroke-width="0.3" stroke-linejoin="miter">
+  <polygon fill="#efe3c8" points="0.0000,30.0000 5.0000,30.0000 5.0000,25.0000 0.0000,25.0000"/>
+  <polygon fill="#8ec3c9" points="0.0000,25.0000 5.0000,25.0000 5.0000,20.0000 0.0000,20.0000"/>
+  <polygon fill="#3f7f8c" points="0.0000,20.0000 5.0000,20.0000 5.0000,15.0000 0.0000,15.0000"/>
+  <polygon fill="#efe3c8" points="0.0000,15.0000 5.0000,15.0000 5.0000,10.0000 0.0000,10.0000"/>
+  <polygon fill="#3f7f8c" points="0.0000,10.0000 5.0000,10.0000 5.0000,5.0000 0.0000,5.0000"/>
+  <polygon fill="#8ec3c9" points="0.0000,5.0000 5.0000,5.0000 5.0000,0.0000 0.0000,0.0000"/>
+  <polygon fill="#efe3c8" points="5.0000,30.0000 10.0000,30.0000 10.0000,25.0000 5.0000,25.0000"/>
+  <polygon fill="#8ec3c9" points="5.0000,25.0000 10.0000,25.0000 10.0000,20.0000 5.0000,20.0000"/>
+  <polygon fill="#8ec3c9" points="5.0000,20.0000 10.0000,20.0000 10.0000,15.0000 5.0000,15.0000"/>
+  <polygon fill="#8ec3c9" points="5.0000,15.0000 10.0000,15.0000 10.0000,10.0000 5.0000,10.0000"/>
+  <polygon fill="#3f7f8c" points="5.0000,10.0000 10.0000,10.0000 10.0000,5.0000 5.0000,5.0000"/>
+  <polygon fill="#8ec3c9" points="5.0000,5.0000 10.0000,5.0000 10.0000,0.0000 5.0000,0.0000"/>
+  <polygon fill="#8ec3c9" points="10.0000,30.0000 15.0000,30.0000 15.0000,25.0000 10.0000,25.0000"/>
+  <polygon fill="#efe3c8" points="10.0000,25.0000 15.0000,25.0000 15.0000,20.0000 10.0000,20.0000"/>
+  <polygon fill="#3f7f8c" points="10.0000,20.0000 15.0000,20.0000 15.0000,15.0000 10.0000,15.0000"/>
+  <polygon fill="#3f7f8c" points="10.0000,15.0000 15.0000,15.0000 15.0000,10.0000 10.0000,10.0000"/>
+  <polygon fill="#3f7f8c" points="10.0000,10.0000 15.0000,10.0000 15.0000,5.0000 10.0000,5.0000"/>
+  <polygon fill="#3f7f8c" points="10.0000,5.0000 15.0000,5.0000 15.0000,0.0000 10.0000,0.0000"/>
+  <polygon fill="#efe3c8" points="15.0000,30.0000 20.0000,30.0000 20.0000,25.0000 15.0000,25.0000"/>
+  <polygon fill="#efe3c8" points="15.0000,25.0000 20.0000,25.0000 20.0000,20.0000 15.0000,20.0000"/>
+  <polygon fill="#3f7f8c" points="15.0000,20.0000 20.0000,20.0000 20.0000,15.0000 15.0000,15.0000"/>
+  <polygon fill="#8ec3c9" points="15.0000,15.0000 20.0000,15.0000 20.0000,10.0000 15.0000,10.0000"/>
+  <polygon fill="#efe3c8" points="15.0000,10.0000 20.0000,10.0000 20.0000,5.0000 15.0000,5.0000"/>
+  <polygon fill="#8ec3c9" points="15.0000,5.0000 20.0000,5.0000 20.0000,0.0000 15.0000,0.0000"/>
+  <polygon fill="#8ec3c9" points="20.0000,30.0000 25.0000,30.0000 25.0000,25.0000 20.0000,25.0000"/>
+  <polygon fill="#3f7f8c" points="20.0000,25.0000 25.0000,25.0000 25.0000,20.0000 20.0000,20.0000"/>
+  <polygon fill="#efe3c8" points="20.0000,20.0000 25.0000,20.0000 25.0000,15.0000 20.0000,15.0000"/>
+  <polygon fill="#8ec3c9" points="20.0000,15.0000 25.0000,15.0000 25.0000,10.0000 20.0000,10.0000"/>
+  <polygon fill="#3f7f8c" points="20.0000,10.0000 25.0000,10.0000 25.0000,5.0000 20.0000,5.0000"/>
+  <polygon fill="#3f7f8c" points="20.0000,5.0000 25.0000,5.0000 25.0000,0.0000 20.0000,0.0000"/>
+  <polygon fill="#efe3c8" points="25.0000,30.0000 30.0000,30.0000 30.0000,25.0000 25.0000,25.0000"/>
+  <polygon fill="#8ec3c9" points="25.0000,25.0000 30.0000,25.0000 30.0000,20.0000 25.0000,20.0000"/>
+  <polygon fill="#efe3c8" points="25.0000,20.0000 30.0000,20.0000 30.0000,15.0000 25.0000,15.0000"/>
+  <polygon fill="#efe3c8" points="25.0000,15.0000 30.0000,15.0000 30.0000,10.0000 25.0000,10.0000"/>
+  <polygon fill="#efe3c8" points="25.0000,10.0000 30.0000,10.0000 30.0000,5.0000 25.0000,5.0000"/>
+  <polygon fill="#3f7f8c" points="25.0000,5.0000 30.0000,5.0000 30.0000,0.0000 25.0000,0.0000"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="directions" fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="16.4425" y1="12.5000" x2="18.5075" y2="12.5000"/>   <!-- #8ec3c9 tiles: lines at 0 deg -->
+  <line x1="12.5000" y1="18.5575" x2="12.5000" y2="16.4925"/>   <!-- #3f7f8c tiles: lines at 90 deg -->
+  <line x1="11.2626" y1="23.7374" x2="13.7374" y2="21.2626"/>   <!-- #efe3c8 tiles: lines at 45 deg -->
+</g>
+</svg>

@@ -20,7 +20,8 @@ pub struct Toolpaths {
     pub seg: Vec<[f32; 6]>,
     /// Index into `features`.
     pub feature: Vec<u8>,
-    /// Layer number (0 = before the first layer change).
+    /// Layer number: 0 is the first printed layer, with the start G-code
+    /// before it (see `fold_start`).
     pub layer: Vec<u32>,
     pub features: Vec<String>,
     pub layer_z: Vec<f64>,
@@ -44,6 +45,9 @@ pub fn extract<S: AsRef<str>>(lines: &[S], arc_step: f64) -> Toolpaths {
     let mut cur: u8 = 255;
     let mut layer: u32 = 0;
     let mut tool: u8 = 0;
+    // whether the layer has printed yet: its height is its moves' (the Z at the
+    // layer change is only a fallback, and may be the start G-code's)
+    let mut printed = false;
     for line in lines {
         let line = line.as_ref();
         let s = line.trim_start();
@@ -61,6 +65,7 @@ pub fn extract<S: AsRef<str>>(lines: &[S], arc_step: f64) -> Toolpaths {
             } else if is_layer_change(s) {
                 layer += 1;
                 t.layer_z.push(m.z);
+                printed = false;
             }
             continue;
         }
@@ -90,9 +95,10 @@ pub fn extract<S: AsRef<str>>(lines: &[S], arc_step: f64) -> Toolpaths {
             continue;
         }
         let lz = &mut t.layer_z[layer as usize];
-        if *lz < mv.z1 {
+        if !printed || *lz < mv.z1 {
             *lz = mv.z1;
         }
+        printed = true;
         let (z0, z1) = (mv.z0, mv.z1);
         let pts = if (mv.cmd == "G2" || mv.cmd == "G3") && !mv.multi_turn() {
             arc_points(
@@ -140,8 +146,48 @@ pub fn extract<S: AsRef<str>>(lines: &[S], arc_step: f64) -> Toolpaths {
             *f = u;
         }
     }
+    fold_start(&mut t);
     t.layer_z = t.layer_z.iter().map(|z| round4(*z)).collect();
     t
+}
+
+/// Features of the object itself, as opposed to the start G-code's purge lines.
+fn is_part_feature(name: &str) -> bool {
+    [
+        "wall",
+        "perimeter",
+        "infill",
+        "surface",
+        "bridge",
+        "overhang",
+        "support",
+        "ironing",
+    ]
+    .iter()
+    .any(|w| name.contains(w))
+}
+
+/// Slicers mark the first layer's start with a layer change, so whatever comes
+/// before it is the start G-code (a purge line, a wipe), not a layer of its own.
+/// Its moves are drawn with the first layer: layer 0 is then the first printed
+/// layer, as a slicer's preview counts it. Left alone when no layer change
+/// follows, or when the object itself starts before the first one.
+fn fold_start(t: &mut Toolpaths) {
+    if t.layer_z.len() < 2 {
+        return;
+    }
+    let part = |i: usize| {
+        t.features
+            .get(t.feature[i] as usize)
+            .is_some_and(|f| is_part_feature(f))
+    };
+    if (0..t.seg.len()).any(|i| t.layer[i] == 0 && part(i)) {
+        return;
+    }
+    for l in t.layer.iter_mut() {
+        *l = l.saturating_sub(1);
+    }
+    t.layer_z.remove(0);
 }
 
 impl Toolpaths {
@@ -278,5 +324,31 @@ mod tests {
         let (buf, info) = t.buffer(Some(1), None);
         assert_eq!(&buf[..4], MAGIC);
         assert_eq!(info["count"].as_u64().unwrap() as usize, t.seg.len() - 1);
+    }
+
+    #[test]
+    fn start_gcode_is_drawn_with_the_first_layer() {
+        let g = [
+            "G90\n",
+            "M82\n",
+            "G1 X0 Y0 Z0.3 F600\n",
+            "; FEATURE: Custom\n",
+            "G1 X50 Y0 E2\n",
+            "; CHANGE_LAYER\n",
+            "G1 Z0.2\n",
+            "; FEATURE: Bottom surface\n",
+            "G1 X50 Y10 E3\n",
+            "; CHANGE_LAYER\n",
+            "G1 Z0.4\n",
+            "; FEATURE: Internal solid infill\n",
+            "G1 X0 Y10 E4\n",
+        ];
+        let t = extract(&g, 0.5);
+        assert_eq!(
+            t.layer_z,
+            vec![0.2, 0.4],
+            "the purge line is no layer of its own"
+        );
+        assert_eq!(t.layer, vec![0, 0, 1]);
     }
 }

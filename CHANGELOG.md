@@ -1,0 +1,25 @@
+# Changelog
+
+What changed in each version of TessaFab: the app, the engine and the
+`tessafab` command line, which are released together. The installers are on
+the [releases page](https://github.com/tessafab/tessafab/releases).
+
+Write changes under **Unreleased** as they are made, for the people who use
+TessaFab: what they'll notice, not how it was done. `tools/release/release.sh` turns
+that section into the version's entry when a release is made.
+
+## Unreleased
+
+### New
+
+- **A patterned bottom takes the pattern depth.** With **Pattern depth** at 2 or more and the bottom patterned, the bottom's solid layers above the first get the same tiles too, without grout (the bottom lies on the plate). It stops where the slicer's bottom shell layers do, and says so.
+- **The hexagon tiles example** is now seven hexagons on one plate, spaced apart, with the pattern carrying on across the gaps. It's also an STL, `examples/hexagons.stl`, to slice yourself.
+
+### Changed
+
+- **Relief is now called Depth**, and grout depth is **Pattern depth**: the number of layers the pattern goes into, counting the surface. Project files keep `relief.groutDepth`, so saved projects open as before.
+
+### Fixed
+
+- **Preview counted the start of the print as a layer.** The purge line before the first layer showed as layer 1, so the real first layer looked like layer 2. It's now drawn with the first layer, and each layer shows its own height.
+- **Export could stop with "The printer would be left in a different state"** on slices whose speeds have fractions (`F9466.211`, common with concentric surfaces): the speed restored after a patterned surface was rounded. It's now restored exactly.

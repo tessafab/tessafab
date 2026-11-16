@@ -203,9 +203,10 @@ fn the_project_keeps_how_the_pattern_is_laid() {
     assert!(s.set_project(&p, None).is_err());
 }
 
-/// The hexagon tiles example's own project (nineteen of the same hexagon, on
-/// the bed at 0, 10 and 20 degrees): its placements already turn the copies
-/// back square, so with the pattern on each piece none is turned further.
+/// The hexagon tiles example's own project (seven of the same hexagon, square
+/// on the bed and placed as they lie), then the hexes model (copies on the bed
+/// at 0, 10 and 20 degrees): copies already square aren't turned further when
+/// the pattern goes on each piece.
 /// A hexagon fits itself every 60 degrees but tumbling blocks' faces only
 /// every 120, so a copy turned 60 shows its light and dark faces swapped;
 /// the slicer's small notches at some corners must not tip it there.

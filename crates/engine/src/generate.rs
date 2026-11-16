@@ -167,7 +167,8 @@ pub fn generate_plate(
     } else {
         None
     };
-    // relief: grout cut into the solid layers under the top (no deeper than them)
+    // pattern depth (relief): the pattern carried into the solid layers under the
+    // top, grout and all, and over a patterned bottom (no deeper than them)
     let mut eargs = args.engine_args();
     let grout = project::grout_depth(project);
     if grout > 1 {
@@ -178,7 +179,7 @@ pub fn generate_plate(
             .or_else(|| plate.config().f64("top_solid_layers"));
         if let Some(n) = shells.filter(|&n| (grout as f64) > n) {
             log.push_str(&format!(
-                "relief: grout depth {grout} is deeper than the slicer's {n} top shell layers; the grooves stop there\n"
+                "depth: pattern depth {grout} is deeper than the slicer's {n} top shell layers; the pattern stops there\n"
             ));
         }
     }

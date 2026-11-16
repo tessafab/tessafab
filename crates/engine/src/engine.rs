@@ -38,7 +38,8 @@ pub struct Args {
     pub border: Option<usize>,
     /// Layers the grout is cut into, counting the top (M22, relief): 1 (the
     /// top only) when unset; deeper grout redraws the solid layers under the
-    /// top with the top's tiles, grout and all.
+    /// top with the top's tiles, grout and all. A patterned bottom takes the
+    /// same depth: its solid layers above the first get its tiles too (no grout).
     #[serde(default)]
     pub grout_depth: Option<usize>,
     /// Raised tiles (M22b, relief): layers above the top, per tile group.
@@ -688,7 +689,9 @@ impl<'a> Emitter<'a> {
         if self.abs_e {
             self.out.push(format!("G92 E{}\n", fmt(end.3, 5)));
         }
-        self.out.push(format!("G1 F{}\n", fmt(end.4, 0)));
+        // the slicer's feed rate as it wrote it: some write fractions (F9466.211),
+        // and the export checks the printer is left exactly where it was
+        self.out.push(format!("G1 F{}\n", fmt(end.4, 4)));
     }
 }
 
@@ -1208,7 +1211,8 @@ pub struct Bottom<'a> {
     pub select: Option<Select<'a>>,
     /// Bottom colour depth (M20b): layers from the plate drawn in the tile
     /// groups' filaments when the plate prints colour tiles; 1, the first
-    /// layer alone, by default. The layers above the first keep the slicer's
+    /// layer alone, by default. Above the relief depth (`Args::grout_depth`,
+    /// whose layers get the tiles' own lines) the layers keep the slicer's
     /// lines (their directions alternate, for strength): only their colours
     /// follow the tiles.
     pub depth: usize,
@@ -1568,9 +1572,14 @@ pub fn process_plate_faces(
                 log += &format!("layer {}: kept original bottom surface ({})\n", layer, why);
             }
         }
-        // bottom colour depth: the layers above the first, recoloured
+        // the layers above the first: within the relief depth (grout depth,
+        // M22) the same tiles, lines and all (no grout: the face lies on the
+        // plate); above that, within the bottom colour depth (M20b), the
+        // slicer's lines recoloured
         let coloured = colour.as_ref().is_some_and(|c| c.plan.uses_colour());
-        if let (true, true, Some(first)) = (b.depth > 1, coloured, first_bottom) {
+        let relief = args.grout_depth.unwrap_or(1).max(1);
+        let deep = relief.max(if coloured { b.depth } else { 1 });
+        if let (true, Some(first)) = (deep > 1, first_bottom) {
             let region = geom::union_all(&bottom_area);
             let above = crate::gcode::find_blocks_of(
                 p.lines.clone(),
@@ -1580,7 +1589,7 @@ pub fn process_plate_faces(
             let mut groups: Vec<Vec<&Block>> = Vec::new();
             let mut keys: Vec<(usize, i64)> = Vec::new();
             for blk in &above.blocks {
-                if blk.abort.is_some() || blk.layer <= first || blk.layer >= first + b.depth {
+                if blk.abort.is_some() || blk.layer <= first || blk.layer >= first + deep {
                     continue;
                 }
                 if geom::area(&geom::intersection(&raw_of(blk), &region)) < 1.0 {
@@ -1595,7 +1604,10 @@ pub fn process_plate_faces(
                     }
                 }
             }
+            let mut found: Vec<usize> = Vec::new();
             for g in groups {
+                let layer = g[0].layer;
+                found.push(layer);
                 let (lo, hi) = (g[0].first.unwrap_or(0), g[g.len() - 1].last);
                 if replacements
                     .iter()
@@ -1603,21 +1615,51 @@ pub fn process_plate_faces(
                 {
                     continue;
                 }
+                if layer < first + relief {
+                    let others = above.others.get(&layer).unwrap_or(&empty);
+                    let cp = colour.as_ref().map(|c| c.plan.checkpoint());
+                    let plan = colour
+                        .as_mut()
+                        .map(|c| &mut *c.plan)
+                        .filter(|p| p.uses_colour());
+                    match rewrite_group(&g, args, others, None, b.pl, plan, None) {
+                        Ok((rep, info)) => {
+                            replacements.extend(rep);
+                            log += &format!("layer {}: bottom relief {}\n", layer, info);
+                        }
+                        Err(why) => {
+                            if let (Some(c), Some(cp)) = (colour.as_mut(), cp) {
+                                c.plan.rollback(cp);
+                            }
+                            log += &format!(
+                                "layer {}: kept original solid layer over a patterned bottom ({})\n",
+                                layer, why
+                            );
+                        }
+                    }
+                    continue;
+                }
                 let c = colour.as_mut().unwrap();
                 let cp = c.plan.checkpoint();
                 match recolour_group(&g, args, &region, b.pl, c.plan) {
                     Ok((rep, info)) => {
                         replacements.extend(rep);
-                        log += &format!("layer {}: bottom colour depth {}\n", g[0].layer, info);
+                        log += &format!("layer {}: bottom colour depth {}\n", layer, info);
                     }
                     Err(why) => {
                         c.plan.rollback(cp);
                         log += &format!(
                             "layer {}: kept original solid layer over a coloured bottom ({})\n",
-                            g[0].layer, why
+                            layer, why
                         );
                     }
                 }
+            }
+            // relief deeper than the bottom's solid layers: say where it stops
+            if let Some(l) = (first + 1..first + relief).find(|l| !found.contains(l)) {
+                log += &format!(
+                    "depth: layer {l} over the bottom isn't solid; the bottom pattern stops there\n"
+                );
             }
         }
     }
@@ -1682,4 +1724,20 @@ pub fn process_plate_faces(
     }
     let _: Option<Coord<f64>> = None;
     (out, done, skipped, log, added)
+}
+
+#[cfg(test)]
+mod emitter_tests {
+    use super::*;
+
+    #[test]
+    fn finish_restores_a_fractional_feed_rate() {
+        let args = crate::args::RunArgs::default().engine_args();
+        let mut em = Emitter::new((0.0, 0.0, 0.2, 0.0, 1200.0), false, &args);
+        em.finish((0.0, 0.0, 0.2, 0.0, 9466.211));
+        assert_eq!(em.out.last().unwrap(), "G1 F9466.211\n");
+        let mut em = Emitter::new((0.0, 0.0, 0.2, 0.0, 1200.0), false, &args);
+        em.finish((0.0, 0.0, 0.2, 0.0, 9000.0));
+        assert_eq!(em.out.last().unwrap(), "G1 F9000\n");
+    }
 }

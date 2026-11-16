@@ -1,4 +1,5 @@
-//! Relief (ADR 0010, M22a): grout cut into the solid layers under the top.
+//! Relief, the app's Depth (ADR 0010, M22a): the pattern carried into the solid
+//! layers under the top, grout and all, and over a patterned bottom.
 
 use serde_json::json;
 use std::path::PathBuf;
@@ -6,6 +7,10 @@ use tessafab_core::edition::Edition;
 use tessafab_core::session::{no_progress, Error, Session};
 
 fn square(edition: Edition, grout_depth: u64) -> Session {
+    square_faces(edition, grout_depth, json!(["top"]))
+}
+
+fn square_faces(edition: Edition, grout_depth: u64, faces: serde_json::Value) -> Session {
     let ex = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../examples");
     let mut s = Session::new(None);
     s.edition = edition;
@@ -18,6 +23,7 @@ fn square(edition: Edition, grout_depth: u64) -> Session {
     s.set_project(
         &json!({"schemaVersion": 3, "assembly": {"placements": placements},
                 "pattern": {"id": "running_bond", "values": {"grout": 1.0}},
+                "source": {"surfaces": {"faces": faces}},
                 "targets": {"gcode": {"relief": {"groutDepth": grout_depth}}}}),
         None,
     )
@@ -70,13 +76,65 @@ fn grout_is_cut_into_the_layers_under_the_top() {
     }
 }
 
+/// The lines of one layer (0: before the first layer change).
+fn layer_lines(lines: &[String], layer: usize) -> Vec<String> {
+    let mut k = 0;
+    let mut out = Vec::new();
+    for l in lines {
+        if l.starts_with("; CHANGE_LAYER") || l.starts_with(";LAYER_CHANGE") {
+            k += 1;
+        }
+        if k == layer {
+            out.push(l.clone());
+        }
+    }
+    out
+}
+
+#[test]
+fn a_patterned_bottom_takes_the_relief_depth() {
+    let both = || json!(["top", "bottom"]);
+    let mut flat = square_faces(Edition::Pro, 1, both());
+    let r = flat.generate(&mut no_progress).unwrap();
+    let log = r["plates"][0]["log"].as_str().unwrap();
+    assert!(log.contains("layer 1: patterned bottom surface"), "{log}");
+    assert!(!log.contains("bottom relief"), "{log}");
+    let flat_lines = flat.result_lines(0, 1).unwrap().to_vec();
+
+    let mut deep = square_faces(Edition::Pro, 2, both());
+    let r = deep.generate(&mut no_progress).unwrap();
+    let log = r["plates"][0]["log"].as_str().unwrap();
+    let relief: Vec<&str> = log
+        .lines()
+        .filter(|l| l.contains(": bottom relief "))
+        .collect();
+    assert_eq!(relief.len(), 1, "{log}");
+    assert!(relief[0].starts_with("layer 2: "), "{log}");
+    assert_eq!(deep.check_result().unwrap()["ok"], true);
+    let deep_lines = deep.result_lines(0, 1).unwrap();
+    // the first layer is patterned alike; the second is redrawn; the third is as sliced
+    assert_eq!(layer_lines(deep_lines, 1), layer_lines(&flat_lines, 1));
+    assert_ne!(layer_lines(deep_lines, 2), layer_lines(&flat_lines, 2));
+    assert_eq!(layer_lines(deep_lines, 3), layer_lines(&flat_lines, 3));
+
+    // deeper than the bottom's solid layers: patterned up to them, and said
+    let mut s = square_faces(Edition::Pro, 10, both());
+    let r = s.generate(&mut no_progress).unwrap();
+    let log = r["plates"][0]["log"].as_str().unwrap();
+    assert!(
+        log.contains("over the bottom isn't solid; the bottom pattern stops there"),
+        "{log}"
+    );
+    assert_eq!(s.check_result().unwrap()["ok"], true);
+}
+
 #[test]
 fn deeper_than_the_shell_is_reported_and_free_is_refused() {
     let mut s = square(Edition::Pro, 10);
     let r = s.generate(&mut no_progress).unwrap();
     let log = r["plates"][0]["log"].as_str().unwrap();
     assert!(
-        log.contains("relief: grout depth 10 is deeper than the slicer's"),
+        log.contains("depth: pattern depth 10 is deeper than the slicer's"),
         "{log}"
     );
 

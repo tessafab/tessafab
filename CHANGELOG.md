@@ -10,6 +10,8 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+## 0.2.0-beta.1 (2026-11-16)
+
 ### New
 
 - **A patterned bottom takes the pattern depth.** With **Pattern depth** at 2 or more and the bottom patterned, the bottom's solid layers above the first get the same tiles too, without grout (the bottom lies on the plate). It stops where the slicer's bottom shell layers do, and says so.

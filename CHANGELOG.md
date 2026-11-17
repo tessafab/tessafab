@@ -10,11 +10,13 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
-## 0.2.0-beta.2 (2026-11-16)
-
 ### Changed
 
 - **One TessaFab logo at every size.** The app icon and the logo now have two lines in each tile everywhere, as the small icons already did, so they look the same in the Dock, the menu bar and on the website. The jigsaw example's wordmark pattern uses it too.
+
+### Fixed
+
+- **The Mac app opens after it's downloaded.** It's now signed with a Developer ID and notarized by Apple, so macOS no longer says it can't be opened, and it needs no workaround.
 
 ## 0.2.0-beta.1 (2026-11-16)
 

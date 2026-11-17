@@ -76,9 +76,13 @@ impl Target for Probe {
 }
 
 fn hexes(mode: Option<&str>) -> Session {
+    hexes_in(Edition::Pro, mode)
+}
+
+fn hexes_in(edition: Edition, mode: Option<&str>) -> Session {
     let ex = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../examples");
     let mut s = Session::new(None);
-    s.edition = Edition::Pro;
+    s.edition = edition;
     s.add_target(Box::new(Probe));
     s.open(
         &[ex.join("hexes.gcode.3mf").to_string_lossy().to_string()],
@@ -256,4 +260,26 @@ fn copies_already_square_are_not_turned_onto_another_symmetry() {
         let d = (r - seen[0]).rem_euclid(360.0);
         assert!(d.min(360.0 - d) < 0.5, "{seen:?}");
     }
+}
+
+/// Without Pro the whole assembly stays in the project, shown in the app, and
+/// only the first placement (the piece the user chose) is patterned.
+#[test]
+fn the_free_edition_patterns_only_the_first_placement() {
+    let mut free = hexes_in(Edition::Community, None);
+    assert_eq!(free.assembly_status()["links"].as_array().unwrap().len(), 9);
+    assert_eq!(free.assembly_status()["frames"].as_array().unwrap().len(), 9);
+    let r = free.generate_with("probe", &mut no_progress).unwrap();
+    assert_eq!(r.as_array().unwrap().len(), 1);
+    let free_g = free.generate(&mut no_progress).unwrap();
+
+    let mut pro = hexes(None);
+    let r = pro.generate_with("probe", &mut no_progress).unwrap();
+    assert_eq!(r.as_array().unwrap().len(), 9);
+    let pro_g = pro.generate(&mut no_progress).unwrap();
+    let rewritten = |g: &Value| -> u64 {
+        g["plates"].as_array().unwrap().iter().map(|p| p["rewritten"].as_u64().unwrap()).sum()
+    };
+    assert!(rewritten(&free_g) > 0);
+    assert!(rewritten(&free_g) < rewritten(&pro_g));
 }

@@ -22,6 +22,7 @@ use crate::source::{self, Source};
 use crate::target::{Context, Target};
 use geo::{BoundingRect, Polygon};
 use serde_json::{json, Map, Value};
+use std::borrow::Cow;
 use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
 
@@ -194,17 +195,35 @@ impl Session {
         }
     }
 
-    /// Call `f` with a target and the context it works from.
+    /// Call `f` with a target and the context it works from: the project as
+    /// the edition patterns it (see [`Edition::patterned`]).
     fn with_target<T>(
         &mut self,
         kind: &str,
         f: impl FnOnce(&mut dyn Target, &Context) -> Result<T>,
     ) -> Result<T> {
+        self.with_target_on(kind, false, f)
+    }
+
+    /// As [`Session::with_target`]; `whole`: every placement, patterned or
+    /// not (the app's views of the assembly show them all).
+    fn with_target_on<T>(
+        &mut self,
+        kind: &str,
+        whole: bool,
+        f: impl FnOnce(&mut dyn Target, &Context) -> Result<T>,
+    ) -> Result<T> {
         let k = self.target_index(kind)?;
+        let project = if whole {
+            Cow::Borrowed(&self.project)
+        } else {
+            self.edition.patterned(&self.project)
+        };
+        let n = self.patterned_links();
         let cx = Context {
             source: &*self.source,
-            project: &self.project,
-            links: &self.links,
+            project: &project,
+            links: if whole { &self.links } else { &self.links[..n] },
             library: &self.library,
             edition: self.edition,
             work: &self.work.0,
@@ -212,12 +231,28 @@ impl Session {
         f(&mut *self.targets[k], &cx)
     }
 
+    /// How many of the links belong to placements the edition patterns.
+    fn patterned_links(&self) -> usize {
+        self.edition
+            .patterned_count(self.placements().len())
+            .min(self.links.len())
+    }
+
     /// The G-code target, for the app's views of its result.
     fn gcode_view<T>(
         &mut self,
         f: impl FnOnce(&mut GcodeTarget, &Context) -> Result<T>,
     ) -> Result<T> {
-        self.with_target(project::GCODE, |t, cx| {
+        self.gcode_view_on(false, f)
+    }
+
+    /// As [`Session::gcode_view`], over every placement when `whole`.
+    fn gcode_view_on<T>(
+        &mut self,
+        whole: bool,
+        f: impl FnOnce(&mut GcodeTarget, &Context) -> Result<T>,
+    ) -> Result<T> {
+        self.with_target_on(project::GCODE, whole, |t, cx| {
             let g = t
                 .as_any_mut()
                 .downcast_mut::<GcodeTarget>()
@@ -319,12 +354,15 @@ impl Session {
         if self.project["pattern"].is_null() && self.project["assembly"]["layoutSvg"].is_null() {
             return err("choose a pattern first");
         }
-        let placements = self.placements();
+        // only the placements this edition patterns need to be found
+        let mut placements = self.placements();
+        placements.truncate(self.edition.patterned_count(placements.len()));
         if !placements.is_empty() {
             if self.project["pattern"].is_null() {
                 return err("choose a pattern first");
             }
-            if let Some(trouble) = assembly::problems(&placements, &self.links) {
+            let links = &self.links[..self.patterned_links()];
+            if let Some(trouble) = assembly::problems(&placements, links) {
                 return err(format!("some placed pieces can't be found: {trouble}"));
             }
         }
@@ -369,10 +407,11 @@ impl Session {
     /// Problems and warnings of a target's last result.
     pub fn check_with(&self, kind: &str) -> Result<Value> {
         let k = self.target_index(kind)?;
+        let project = self.edition.patterned(&self.project);
         let cx = Context {
             source: &*self.source,
-            project: &self.project,
-            links: &self.links,
+            project: &project,
+            links: &self.links[..self.patterned_links()],
             library: &self.library,
             edition: self.edition,
             work: &self.work.0,
@@ -424,20 +463,28 @@ impl Session {
 
     /// Every placed piece's toolpaths moved into the assembly.
     pub fn assembled_toolpaths(&mut self) -> Result<Value> {
-        self.gcode_view(|g, cx| g.assembled_toolpaths(cx))
+        self.gcode_view_on(true, |g, cx| g.assembled_toolpaths(cx))
     }
 
     /// Every placed piece as solid slabs moved into the assembly.
     pub fn assembled_solid(&mut self) -> Result<Value> {
-        self.gcode_view(|g, cx| g.assembled_solid(cx))
+        self.gcode_view_on(true, |g, cx| g.assembled_solid(cx))
     }
 
     /// How each placement links to the pieces now on the plates; which
     /// placements are copies of one another (the group's first placement);
     /// and where the pattern sees each placement (ADR 0014: with the pattern
-    /// on each piece, not where the assembly puts it).
+    /// on each piece, not where the assembly puts it). Without Pro, the frame
+    /// of the one patterned piece is worked out from it alone, as the target
+    /// does; the pieces left as sliced keep their own.
     pub fn assembly_status(&self) -> Value {
-        let frames: Vec<Value> = assembly::piece_frames(&self.project)
+        let mut frames = assembly::piece_frames(&self.edition.patterned(&self.project));
+        frames.extend(
+            assembly::piece_frames(&self.project)
+                .into_iter()
+                .skip(frames.len()),
+        );
+        let frames: Vec<Value> = frames
             .iter()
             .map(|f| json!({"rotation": f.rotation, "position": [f.position.0, f.position.1]}))
             .collect();

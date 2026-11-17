@@ -2,9 +2,12 @@
 //!
 //! The core alone (a build from the Community source) opens one plate with
 //! one piece. The Pro plugin sets the edition from the licence: without one
-//! (the official Community app) anything opens and one chosen piece is
-//! patterned; the trial and Pro pattern everything, and trial exports are
-//! marked as not for commercial use.
+//! (the official Community app) anything opens and the whole assembly can be
+//! laid out, but only one chosen piece (the first placement) is patterned;
+//! the trial and Pro pattern everything, and trial exports are marked as not
+//! for commercial use.
+
+use std::borrow::Cow;
 
 use serde_json::{json, Value};
 
@@ -74,6 +77,34 @@ impl Edition {
         ))
     }
 
+    /// How many of the assembly's placements this edition patterns: every one
+    /// with Pro (or its trial), else only the first (the piece the user
+    /// chose). The rest stay in the project, shown but left as sliced.
+    pub fn patterned_count(self, placed: usize) -> usize {
+        if self.full() {
+            placed
+        } else {
+            placed.min(1)
+        }
+    }
+
+    /// The project as this edition patterns it: its placements cut to
+    /// [`Edition::patterned_count`].
+    pub fn patterned(self, project: &Value) -> Cow<'_, Value> {
+        let placed = project["assembly"]["placements"]
+            .as_array()
+            .map_or(0, Vec::len);
+        let n = self.patterned_count(placed);
+        if n == placed {
+            return Cow::Borrowed(project);
+        }
+        let mut p = project.clone();
+        if let Some(pls) = p["assembly"]["placements"].as_array_mut() {
+            pls.truncate(n);
+        }
+        Cow::Owned(p)
+    }
+
     /// Whether an assembly of `placed` pieces may be patterned.
     pub fn check_pattern(self, placed: usize) -> Result<(), String> {
         if self.full() || placed <= 1 {
@@ -128,6 +159,16 @@ mod tests {
             .contains("choose one piece"));
         assert!(Edition::Trial.check_pattern(8).is_ok());
         assert!(Edition::Pro.check_pattern(8).is_ok());
+    }
+
+    #[test]
+    fn without_pro_only_the_first_placement_is_patterned() {
+        let project = json!({"assembly": {"placements": [{"piece": 3}, {"piece": 1}, {"piece": 2}]}});
+        let free = Edition::Community.patterned(&project);
+        assert_eq!(free["assembly"]["placements"], json!([{"piece": 3}]));
+        assert!(matches!(Edition::Pro.patterned(&project), Cow::Borrowed(_)));
+        assert_eq!(Edition::Trial.patterned_count(3), 3);
+        assert_eq!(Edition::Community.patterned_count(0), 0);
     }
 
     #[test]

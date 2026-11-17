@@ -120,6 +120,8 @@ pub fn run(
         ));
     }
     let project = project::load(&cli.project, lib).map_err(|e| unchanged(e.0))?;
+    // without Pro the assembly may hold every piece; only the first is patterned
+    let project = edition.patterned(&project).into_owned();
     let kind = container::kind(src);
     if kind == Kind::ThreeMf {
         return Err(Stop(

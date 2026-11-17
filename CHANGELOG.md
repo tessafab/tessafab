@@ -10,6 +10,11 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+### Changed
+
+- **The free edition shows every piece.** Assemble and Pattern now show the whole assembly instead of a single piece. The free edition still patterns one piece; the others are greyed out, and clicking one patterns it instead. Projects keep every piece, so they open whole in Pro.
+- **Pro features show in the free edition, greyed out.** **Depth**, **In a row** and **In a grid**, **Pattern each piece alike** and patterns from an image are shown where they belong, locked, with a note on hover saying they come with TessaFab Pro.
+
 ### Fixed
 
 - **Naming a new preset:** the **Save** and **Cancel** buttons beside the name no longer run off the edge of the side panel.

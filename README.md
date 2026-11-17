@@ -15,13 +15,48 @@ OrcaSlicer and PrusaSlicer, and rewrites the top surfaces of the pieces with
 the pattern, so there's nothing to change in how you model or slice. More
 ways of making things are to come.
 
+## Patterns that line up across pieces
+
+Make the pieces apart on one plate. Put them together and the pattern runs
+straight across the joins.
+
+<table>
+  <tr>
+    <td width="33%"><img src="docs/images/seams-plate.jpg" alt="Seven hexagon tiles on one build plate, spaced apart, each with its own part of a tumbling blocks pattern"></td>
+    <td width="33%"><img src="docs/images/seams-together.png" alt="The seven hexagons edge to edge in TessaFab, tumbling blocks running across every seam"></td>
+    <td width="33%"><a href="docs/images/seams-made.jpg"><img src="docs/images/seams-made.jpg" alt="The seven hexagons made in shiny silver filament and laid edge to edge, the cubes lining up from one tile to the next"></a></td>
+  </tr>
+  <tr>
+    <td>The seven hexagons, spaced out on one plate</td>
+    <td>The pattern, set up as they'll sit together</td>
+    <td>The finished tiles in silver filament</td>
+  </tr>
+</table>
+
 ## The TessaFab app
 
 A desktop app for macOS, Windows and Linux: put the pieces together, choose
 and adjust a pattern, check it in 3D and export new G-code. Patterning one
 piece is free. TessaFab Pro (with a 14-day trial) patterns whole assemblies
 across many pieces and plates, turns images into patterns, and is licensed
-for commercial use. See [tessafab.com](https://tessafab.com).
+for commercial use. The app isn't in this repository; it's a free download
+from [tessafab.com](https://tessafab.com), and it runs the engine below.
+
+<img src="docs/images/app-pattern.jpg" alt="TessaFab's Pattern step: a gallery of tile patterns on the left, and the seven hexagons in 3D with tumbling blocks across them">
+
+**Pattern:** choose a pattern, adjust it, and see it on the pieces
+in 3D.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/app-assemble.png" alt="TessaFab's Assemble step: the list of pieces on the left, and the seven hexagons fitted together on a grid"></td>
+    <td width="50%"><img src="docs/images/app-preview.jpg" alt="TessaFab's Preview step: the plate's toolpaths in 3D, the top surfaces filled with the pattern, and a layer slider"></td>
+  </tr>
+  <tr>
+    <td><b>Assemble:</b> fit the pieces together the way they'll be used. Edges snap flush.</td>
+    <td><b>Preview:</b> the new G-code, layer by layer, before you export it.</td>
+  </tr>
+</table>
 
 ## This repository
 

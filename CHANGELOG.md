@@ -10,6 +10,8 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+## 0.2.0 (2026-11-17)
+
 ### New
 
 - **TessaFab Pro is for sale.** **Buy TessaFab Pro** in the Licence sheet opens the checkout. Your licence key is shown as soon as you've paid, and emailed to you. Paste it into the Licence sheet to activate.

@@ -10,6 +10,8 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+## 0.2.0-beta.3 (2026-11-17)
+
 ### Changed
 
 - **One TessaFab logo at every size.** The app icon and the logo now have two lines in each tile everywhere, as the small icons already did, so they look the same in the Dock, the menu bar and on the website. The jigsaw example's wordmark pattern uses it too.

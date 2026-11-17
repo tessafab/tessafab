@@ -268,7 +268,10 @@ fn copies_already_square_are_not_turned_onto_another_symmetry() {
 fn the_free_edition_patterns_only_the_first_placement() {
     let mut free = hexes_in(Edition::Community, None);
     assert_eq!(free.assembly_status()["links"].as_array().unwrap().len(), 9);
-    assert_eq!(free.assembly_status()["frames"].as_array().unwrap().len(), 9);
+    assert_eq!(
+        free.assembly_status()["frames"].as_array().unwrap().len(),
+        9
+    );
     let r = free.generate_with("probe", &mut no_progress).unwrap();
     assert_eq!(r.as_array().unwrap().len(), 1);
     let free_g = free.generate(&mut no_progress).unwrap();
@@ -278,7 +281,12 @@ fn the_free_edition_patterns_only_the_first_placement() {
     assert_eq!(r.as_array().unwrap().len(), 9);
     let pro_g = pro.generate(&mut no_progress).unwrap();
     let rewritten = |g: &Value| -> u64 {
-        g["plates"].as_array().unwrap().iter().map(|p| p["rewritten"].as_u64().unwrap()).sum()
+        g["plates"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|p| p["rewritten"].as_u64().unwrap())
+            .sum()
     };
     assert!(rewritten(&free_g) > 0);
     assert!(rewritten(&free_g) < rewritten(&pro_g));

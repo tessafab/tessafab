@@ -163,7 +163,8 @@ mod tests {
 
     #[test]
     fn without_pro_only_the_first_placement_is_patterned() {
-        let project = json!({"assembly": {"placements": [{"piece": 3}, {"piece": 1}, {"piece": 2}]}});
+        let project =
+            json!({"assembly": {"placements": [{"piece": 3}, {"piece": 1}, {"piece": 2}]}});
         let free = Edition::Community.patterned(&project);
         assert_eq!(free["assembly"]["placements"], json!([{"piece": 3}]));
         assert!(matches!(Edition::Pro.patterned(&project), Cow::Borrowed(_)));

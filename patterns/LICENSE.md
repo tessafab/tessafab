@@ -7,6 +7,5 @@ Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0):
 
 Copyright 2026 Dicer International LLC (https://tessafab.com)
 
-The TessaFab name and logo, including the wordmark in
-`examples/jigsaw.image.svg`, are trademarks and are not covered by this
+The TessaFab name and logo are trademarks and are not covered by this
 licence; see `TRADEMARKS.md`.

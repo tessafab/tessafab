@@ -34956,7 +34956,7 @@
   "pattern": {
     "image": "jigsaw.image.svg",
     "values": {
-      "width": 230.0,
+      "width": 250.0,
       "gap": 0.0,
       "threshold": 128,
       "invert": false

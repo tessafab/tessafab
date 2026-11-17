@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24mm" height="24mm" viewBox="0 0 24 24">
+<metadata id="tessafab">{"form": {"components": [{"decimalLimit": 3, "defaultValue": 0.4, "delimiter": false, "description": "The groove between tiles that shows each tile.", "input": true, "key": "grout", "label": "Grout", "properties": {"step": "0.05"}, "requireDecimal": false, "suffix": "mm", "type": "number", "validate": {"integer": false, "max": 3.0, "min": 0.0, "required": true}}]}, "groups": {"#24456b": "Centre", "#3f7f8c": "Corner diamonds", "#c4623f": "Star points", "#e0a83a": "Inner points", "#efe3c8": "Background"}, "name": "Ohio star"}</metadata>
+<title>Ohio star</title>
+<!-- A quilt block: an eight-point star, 24 mm square, five tile groups.
+     Blocks meet at the corners, where the teal diamonds join up. -->
+<g stroke="#0000ff" stroke-width="{{ grout }}" stroke-linejoin="miter">
+  <polygon fill="#3f7f8c" points="4,0 8,4 4,8 0,4"/>
+  <polygon fill="#efe3c8" points="0,0 4,0 0,4"/>
+  <polygon fill="#efe3c8" points="8,0 8,4 4,0"/>
+  <polygon fill="#efe3c8" points="0,8 0,4 4,8"/>
+  <polygon fill="#efe3c8" points="8,8 4,8 8,4"/>
+  <polygon fill="#3f7f8c" points="20,0 24,4 20,8 16,4"/>
+  <polygon fill="#efe3c8" points="16,0 20,0 16,4"/>
+  <polygon fill="#efe3c8" points="24,0 24,4 20,0"/>
+  <polygon fill="#efe3c8" points="16,8 16,4 20,8"/>
+  <polygon fill="#efe3c8" points="24,8 20,8 24,4"/>
+  <polygon fill="#3f7f8c" points="4,16 8,20 4,24 0,20"/>
+  <polygon fill="#efe3c8" points="0,16 4,16 0,20"/>
+  <polygon fill="#efe3c8" points="8,16 8,20 4,16"/>
+  <polygon fill="#efe3c8" points="0,24 0,20 4,24"/>
+  <polygon fill="#efe3c8" points="8,24 4,24 8,20"/>
+  <polygon fill="#3f7f8c" points="20,16 24,20 20,24 16,20"/>
+  <polygon fill="#efe3c8" points="16,16 20,16 16,20"/>
+  <polygon fill="#efe3c8" points="24,16 24,20 20,16"/>
+  <polygon fill="#efe3c8" points="16,24 16,20 20,24"/>
+  <polygon fill="#efe3c8" points="24,24 20,24 24,20"/>
+  <rect fill="#24456b" x="8" y="8" width="8" height="8"/>
+  <polygon fill="#efe3c8" points="8,0 16,0 12,4"/>
+  <polygon fill="#c4623f" points="16,0 16,8 12,4"/>
+  <polygon fill="#e0a83a" points="16,8 8,8 12,4"/>
+  <polygon fill="#c4623f" points="8,8 8,0 12,4"/>
+  <polygon fill="#e0a83a" points="8,16 16,16 12,20"/>
+  <polygon fill="#c4623f" points="16,16 16,24 12,20"/>
+  <polygon fill="#efe3c8" points="16,24 8,24 12,20"/>
+  <polygon fill="#c4623f" points="8,24 8,16 12,20"/>
+  <polygon fill="#c4623f" points="0,8 8,8 4,12"/>
+  <polygon fill="#e0a83a" points="8,8 8,16 4,12"/>
+  <polygon fill="#c4623f" points="8,16 0,16 4,12"/>
+  <polygon fill="#efe3c8" points="0,16 0,8 4,12"/>
+  <polygon fill="#c4623f" points="16,8 24,8 20,12"/>
+  <polygon fill="#efe3c8" points="24,8 24,16 20,12"/>
+  <polygon fill="#c4623f" points="24,16 16,16 20,12"/>
+  <polygon fill="#e0a83a" points="16,16 16,8 20,12"/>
+</g>
+<g fill="none" stroke="#ff8080" stroke-width="0.5">
+  <line x1="0.8" y1="2.133" x2="2.133" y2="0.8"/>
+  <line x1="9" y1="3" x2="9" y2="5"/>
+  <line x1="11" y1="7.066" x2="13" y2="7.066"/>
+  <circle cx="12" cy="12" r="1.333"/>
+  <line x1="3" y1="4" x2="5" y2="4"/>
+</g>
+</svg>

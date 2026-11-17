@@ -10,6 +10,10 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+### New
+
+- **TessaFab Pro is for sale.** **Buy TessaFab Pro** in the Licence sheet opens the checkout. Your licence key is shown as soon as you've paid, and emailed to you. Paste it into the Licence sheet to activate.
+
 ### Changed
 
 - **The free edition shows every piece.** Assemble and Pattern now show the whole assembly instead of a single piece. The free edition still patterns one piece; the others are greyed out, and clicking one patterns it instead. Projects keep every piece, so they open whole in Pro.

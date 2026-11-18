@@ -10,6 +10,11 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+### New
+
+- **TessaFab tells you when a newer version is out.** A note in the top bar links to the download. If your Pro licence's updates ended before that version, the note says so and links to renewing them. Dismiss it to hide it until the next version.
+- **Terms, privacy and refunds** are on tessafab.com and linked from the Licence sheet. TessaFab Pro comes with a 30-day money-back guarantee.
+
 ## 0.2.0 (2026-11-17)
 
 ### New

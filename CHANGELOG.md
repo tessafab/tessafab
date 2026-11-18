@@ -10,6 +10,11 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+### New
+
+- **Sign in with your email.** The first time you open TessaFab, enter your email and we'll send you a 6-digit code. There's no password, and signing in makes your free account. After that TessaFab works offline, as before.
+- **Your account is in Account and licence** (the Licence sheet's new name). Sign out there, or delete your account. Deleting it signs you out on every computer; a Pro licence keeps working with its key.
+
 ## 0.2.1 (2026-11-18)
 
 ### New

@@ -1,6 +1,6 @@
 [package]
 name = "tessafab-engine"
-version = "0.2.1"
+version = "0.3.0"
 edition.workspace = true
 rust-version.workspace = true
 license = "LicenseRef-PolyForm-Noncommercial-1.0.0"

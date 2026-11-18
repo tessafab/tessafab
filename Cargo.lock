@@ -466,7 +466,7 @@ dependencies = [
 
 [[package]]
 name = "pp-dev"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "geo",
  "serde_json",
@@ -678,14 +678,14 @@ dependencies = [
 
 [[package]]
 name = "tessafab-cli"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "tessafab-core",
 ]
 
 [[package]]
 name = "tessafab-core"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "crc32fast",
  "flate2",
@@ -699,14 +699,14 @@ dependencies = [
 
 [[package]]
 name = "tessafab-engine"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "tessafab-core",
 ]
 
 [[package]]
 name = "tessafab-pattern"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "geo",
  "i_overlay 9.1.0",

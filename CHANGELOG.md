@@ -10,6 +10,8 @@ that section into the version's entry when a release is made.
 
 ## Unreleased
 
+## 0.2.1 (2026-11-18)
+
 ### New
 
 - **TessaFab tells you when a newer version is out.** A note in the top bar links to the download. If your Pro licence's updates ended before that version, the note says so and links to renewing them. Dismiss it to hide it until the next version.
